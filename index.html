@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ES6-ES2015核心内容" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/26/hello-world/" class="article-date">
-  <time datetime="2016-12-25T16:02:07.477Z" itemprop="datePublished">2016-12-26</time>
+    <a href="/2017/02/05/ES6-ES2015核心内容/" class="article-date">
+  <time datetime="2017-02-05T08:00:59.000Z" itemprop="datePublished">2017-02-05</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/26/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/02/05/ES6-ES2015核心内容/">ES6/ES2015核心内容</a>
     </h1>
   
 
@@ -83,20 +83,406 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>ECMAScript6(以下简称ES6)是JavScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript2015.<br>也就是说，ES6就是ECMAScript2015.<br>虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序猿在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…</p>
+<p>在我们正式讲解ES6语法之前，我们得先了解下Babel。</p>
+<h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h3><p>Babel是一个广泛使用的ES6转换器，可以将ES6代码转换为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看：<br><img src="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAPhBnsW9jAMmialG8d5icicjKZDCfAJWufBAn7tB1CqHvb6ePU9USlRw1SUOFa9yJKUiamO9ib0O79ZgzQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h3 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h3><ul>
+<li>let,const</li>
+<li>class,extends,super</li>
+<li>arrow functions</li>
+<li>template string</li>
+<li>destructuring</li>
+<li>default</li>
+<li>rest arguments</li>
+</ul>
+<h4 id="let-const"><a href="#let-const" class="headerlink" title="let,const"></a>let,const</h4><p>这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。<br>首先来看下面这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var name = &quot;zach&quot;;</div><div class="line"></div><div class="line">while(true)&#123;</div><div class="line">    var name = &quot;obama&quot;;</div><div class="line">    console.log(name); //obama</div><div class="line">    break;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(name); //obama</div></pre></td></tr></table></figure></p>
+<p>使用var 两次输出都是obama，这是因为ES5只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。第一种场景就是你现在看到的内层变量覆盖外层变量。而let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let name = &apos;zach&apos;</div><div class="line"> </div><div class="line">while (true) &#123;</div><div class="line">    let name = &apos;obama&apos;</div><div class="line">    console.log(name)  //obama</div><div class="line">    break</div><div class="line">&#125;</div><div class="line"> </div><div class="line">console.log(name)  //zach</div></pre></td></tr></table></figure></p>
+<p>另一个var带来的不合理场景就是用来计数的循环变量泄漏为全局变量，如下例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for(var i = 0; i&lt; 10;i ++)&#123;</div><div class="line">    a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line">a[6](); //10</div></pre></td></tr></table></figure></p>
+<p>上面代码中，变量i是var声明的，在全局范围内都有效。所以每一次循环，新的i值都会覆盖旧值，导致最后输出的是最后一轮的i的值。而使用let则不会出现这个问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">  a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 6</div></pre></td></tr></table></figure></p>
+<p>再来看一个更常见的例子，了解下如果不用ES6，而用闭包如何解决这个问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var clickBoxs = document.querySelectorAll(&quot;.clickBox&quot;);</div><div class="line">for(var i = 0; i &lt; clickBoxs.length;i++)&#123;</div><div class="line">    clickBoxs[i].onclick = function()&#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们本来希望的是点击不同的clickBox，显示不同的i，但事实是无论我们点击哪个clickBox，输出的都是5。下面我们来看下，如何用闭包搞定它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function iteratorFactory(i)&#123;</div><div class="line">    var onclick = function()&#123;</div><div class="line">        console.log(i)</div><div class="line">    &#125;</div><div class="line">    return onclick;</div><div class="line">&#125;</div><div class="line">var clickBoxs = document.querySelectorAll(&apos;.clickBox&apos;)</div><div class="line">for (var i = 0; i &lt; clickBoxs.length; i++)&#123;</div><div class="line">    clickBoxs[i].onclick = iteratorFactory(i)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>const也用来声明变量，但是声明的是常量。一旦声明，常量的值就不能改变。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const PI = Math.PI</div><div class="line"> </div><div class="line">PI = 23 //Module build failed: SyntaxError: /es6/app.js: &quot;PI&quot; is read-only</div></pre></td></tr></table></figure></p>
+<p>当我们尝试去改变用const声明的常量时，浏览器就会报错。const有一个很好的应用场景，就是当我们引用第三方库的时声明的变量，用const来声明可以避免未来不小心重命名而导致出现bug：<br><code>const monent = require(&#39;moment&#39;)</code></p>
+<h4 id="class-extends-super"><a href="#class-extends-super" class="headerlink" title="class, extends, super"></a>class, extends, super</h4><p>这3个特性涉及了ES5中最令人头疼的几个部分：原型、构造函数、继承…你还在为它们复杂难懂的语法而烦恼吗？你还在为指针到底指向哪里而纠结万分吗？<br>有了ES6我们不在烦恼！<br>ES6提供更接近传统语言的写法，引入了Class（类）这个概念。新的Class写法让对象原型的写法更加清晰、更像面向对象编程的语法，也更加通俗易懂。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        console.log(this.type + &apos; says &apos; + say)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let animal = new Animal();</div><div class="line">animal.says(&quot;hello&quot;);   //animal says hello</div><div class="line"></div><div class="line">class Cat extends Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        super();</div><div class="line">        this.type = &quot;cat&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let cat = new Cat();</div><div class="line">Cat.says(&quot;hello&quot;);  //cat says hello</div></pre></td></tr></table></figure></p>
+<p>上面代码首先用class定义了有一个“类”，可以看到里面有一个constructor方法，这就是构造方法，而this关键字则代表实例对象。简单地说，constructor内定义的方法和属性是实例对象自己的，而constructor外定义的方法和属性则是所有实例对象可以共享的。<br>Class之间可以通过extends关键字实现继承，这比ES5的通过修改原型链实现继承，要清晰和方便很多。上面定义了一个Cat类，该类通过extends关键字，继承了Animal类的所有属性和方法。<br>super关键字，它指代父类的实例（即父类的this对象）。子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不用super方法，子类就得不到this对象。<br>ES6的继承机制，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this。<br>PS：如果你写react的话，就会发现以上3个东西在最新版React中出现得最多。创建的每个component都是一个继承React Component的类。详见React文档。</p>
+<h4 id="arrow-function"><a href="#arrow-function" class="headerlink" title="arrow function"></a>arrow function</h4><p>这个恐怕是ES6最最常用的一个新特性了，用它来写function比原来的写法要简洁清晰很多:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function(i)&#123; return i + 1; &#125; //ES5</div><div class="line">(i) =&gt; i + 1 //ES6</div></pre></td></tr></table></figure></p>
+<p>简直是简单的不像话对吧…<br>如果方程比较复杂，则需要用{}把代码包起来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function(x, y) &#123; </div><div class="line">    x++;</div><div class="line">    y--;</div><div class="line">    return x + y;</div><div class="line">&#125;</div><div class="line">(x, y) =&gt; &#123;x++; y--; return x+y&#125;</div></pre></td></tr></table></figure></p>
+<p>除了看上去更简洁以外，arrow function还有一项超级无敌的功能！<br>长期以来，JavaScript语言的this对象一直是一个令人头痛的问题，在对象方法中使用this，必须非常小心。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            console.log(this.type + &quot; syas &quot; + say)</div><div class="line">            &#125;,1000)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">vae animal = new Animal();</div><div class="line">animal.says(&quot;hi&quot;);  //undefined says hi</div></pre></td></tr></table></figure></p>
+<p>运行上面的代码会报错，这是因为setTimeout中的this指向的是全局对象。所以为了他能够正确的运行，传统的解决方法有两种：<br>第一种是将this传给self，再用self来指代this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">says(say)&#123;</div><div class="line">       var self = this;</div><div class="line">       setTimeout(function()&#123;</div><div class="line">           console.log(self.type + &apos; says &apos; + say)</div><div class="line">       &#125;, 1000)</div></pre></td></tr></table></figure></p>
+<p>第二种方法是用bind(this),即<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">says(say)&#123;</div><div class="line">       setTimeout(function()&#123;</div><div class="line">           console.log(this.type + &apos; says &apos; + say)</div><div class="line">       &#125;.bind(this), 1000)</div></pre></td></tr></table></figure></p>
+<p>但现在我们有了箭头函数，就不需要这么麻烦了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        setTimeout(()=&gt;&#123;</div><div class="line">            console.log(this.type + &quot; says &quot; + say )</div><div class="line">            &#125;,1000)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> var animal = new Animal()</div><div class="line"> animal.says(&apos;hi&apos;)  //animal says hi</div></pre></td></tr></table></figure></p>
+<p>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</p>
+<h4 id="template-string"><a href="#template-string" class="headerlink" title="template string"></a>template string</h4><p>这个东西也是非常有用，当我们要插入大段的html内容到文档时，传统的写法非常麻烦，所以之前我们通常会引用一些模版工具库，比如mustache等等。<br>大家可以先看一看下面一段代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(&quot;#result&quot;).append(</div><div class="line">  &quot;There are &lt;b&gt;&quot; + basket.count + &quot;&lt;/b&gt; &quot; +</div><div class="line">  &quot;items in your basket, &quot; +</div><div class="line">  &quot;&lt;em&gt;&quot; + basket.onSale +</div><div class="line">  &quot;&lt;/em&gt; are on sale!&quot;</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>我们要用一堆的’+’号来连接文本与变量，而使用ES6的新特性模板字符串“后，我们可以直接这么来写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#result&quot;).append(&apos;</div><div class="line">    There are &lt;b&gt;$&#123;basket.count&#125;&lt;/b&gt; items</div><div class="line">    in your basket, &lt;em&gt;$&#123;basket.onSale&#125;&lt;/em&gt;</div><div class="line">    are on sale!</div><div class="line">    &apos;)</div></pre></td></tr></table></figure></p>
+<p>用反引号（\）来标志起始，用${}来引用变量，而且所有的空格和缩进都会被保留在输出之中，是不是非常爽？！<br>React Router从第1.0.3版开始也使用ES6语法了，比如这个例子:<br><code>&lt;Link to={</code>/taco/${taco.name}<code>}&gt;{taco.name}&lt;/Link&gt;</code></p>
+<h4 id="destructuring"><a href="#destructuring" class="headerlink" title="destructuring"></a>destructuring</h4><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）<br>看下面例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let cat = &quot;ken&quot;;</div><div class="line">let dog = &quot;lili&quot;;</div><div class="line">let zoo = &#123;cat:cat,dog:dog&#125;;</div><div class="line">console.log(zoo);   //Object &#123;cat:&quot;ken&quot;,dog:&quot;lili&quot;&#125;</div></pre></td></tr></table></figure></p>
+<p>用ES6完全可以像下面这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let cat = &apos;ken&apos;</div><div class="line">let dog = &apos;lili&apos;</div><div class="line">let zoo = &#123;cat, dog&#125;</div><div class="line">console.log(zoo)  //Object &#123;cat: &quot;ken&quot;, dog: &quot;lili&quot;&#125;</div></pre></td></tr></table></figure></p>
+<p>反过来可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let dog = &#123;type: &apos;animal&apos;, many: 2&#125;</div><div class="line">let &#123; type, many&#125; = dog</div><div class="line">console.log(type, many)   //animal 2</div></pre></td></tr></table></figure></p>
+<h4 id="default-rest"><a href="#default-rest" class="headerlink" title="default, rest"></a>default, rest</h4><p>default很简单，意思就是默认值。大家可以看下面的例子，调用animal()方法时忘了传参数，传统的做法就是加上这一句type = type || ‘cat’ 来指定默认值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function animal(type)&#123;</div><div class="line">    type = type || &apos;cat&apos;  </div><div class="line">    console.log(type)</div><div class="line">&#125;</div><div class="line">animal()</div></pre></td></tr></table></figure></p>
+<p>如果用ES6我们而已直接这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function animal(type = &apos;cat&apos;)&#123;</div><div class="line">    console.log(type);</div><div class="line">&#125;</div><div class="line">animal();</div></pre></td></tr></table></figure></p>
+<p>最后一个rest语法也很简单，直接看例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function animals(...types)&#123;</div><div class="line">    console.log(types)</div><div class="line">&#125;</div><div class="line">animals(&apos;cat&apos;, &apos;dog&apos;, &apos;fish&apos;) //[&quot;cat&quot;, &quot;dog&quot;, &quot;fish&quot;]</div></pre></td></tr></table></figure></p>
+<p>而如果不用ES6的话，我们则得使用ES5的arguments。</p>
+<h4 id="import-export"><a href="#import-export" class="headerlink" title="import export"></a>import export</h4><p>这两个家伙对应的就是ES6自己的module功能。<br>我们之前写的Javascript一直都没有模块化的体系，无法将一个庞大的JS工程拆分成一个个功能相对独立但相互依赖的小工程，再用一种简单的方法把这些小工程连接在一起。<br>这有可能导致两个问题：</p>
+<ol>
+<li>一方面JS代码变得很臃肿，难以维护</li>
+<li>另一方面我们常常得很注意每个script标签在html中的位置，因为它们通常存在依赖关系，顺序错了有可能就会出BUG。</li>
+</ol>
+<p>在ES6之前为解决上面提到的问题，我们得利用第三方提供的一些方案，主要有两种CommonJs（服务器端）和AMD（浏览器端，如require.js）<br>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。<br>上面的设计思想看不懂也没关系，咱先学会怎么用，等以后用多了、熟练了再去研究它背后的设计思想也不迟！好，那我们就上代码…</p>
+<h5 id="传统的写法"><a href="#传统的写法" class="headerlink" title="传统的写法"></a>传统的写法</h5><p>首先我们回顾下require.js的写法。假设我们有两个js文件: index.js和content.js,现在我们想要在index.js中使用content.js返回的结果，我们要怎么做呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//content.js</div><div class="line">define(&apos;content.js&apos;, function()&#123;</div><div class="line">    return &apos;A cat&apos;;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>然后require：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">require([&apos;./content.js&apos;], function(animal)&#123;</div><div class="line">    console.log(animal);   //A cat</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>那CommonJS是怎么写的呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">var animal = require(&apos;./content.js&apos;)</div><div class="line"> </div><div class="line">//content.js</div><div class="line">module.exports = &apos;A cat&apos;</div></pre></td></tr></table></figure></p>
+<p>以上我把三者都列出来了，妈妈再也不用担心我写混淆了…</p>
+<h4 id="ES6-module的其他高级用法"><a href="#ES6-module的其他高级用法" class="headerlink" title="ES6 module的其他高级用法"></a>ES6 module的其他高级用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//content.js</div><div class="line"> </div><div class="line">export default &apos;A cat&apos;    </div><div class="line">export function say()&#123;</div><div class="line">    return &apos;Hello!&apos;</div><div class="line">&#125;    </div><div class="line">export const type = &apos;dog&apos;</div></pre></td></tr></table></figure>
+<p>上面可以看出，export命令除了输出变量，还可以输出函数，甚至是类（react的模块基本都是输出类）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import &#123; say, type &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;type&#125; says $&#123;says&#125;`)  //The dog says Hello</div></pre></td></tr></table></figure></p>
+<p>这里输入的时候要注意：大括号里面的变量名，必须与被导入模块（content.js）对外接口的名称相同。</p>
+<p>如果还希望输入content.js中输出的默认值(default), 可以写在大括号外面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import animal, &#123; say, type &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;type&#125; says $&#123;says&#125; to $&#123;animal&#125;`)  </div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<h4 id="修改变量名"><a href="#修改变量名" class="headerlink" title="修改变量名"></a>修改变量名</h4><p>此时我们不喜欢type这个变量名，因为它有可能重名，所以我们需要修改一下它的变量名。在es6中可以用as实现一键换名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import animal, &#123; say, type as animalType &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;animalType&#125; says $&#123;says&#125; to $&#123;animal&#125;`)  </div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<h4 id="模块的整体加载"><a href="#模块的整体加载" class="headerlink" title="模块的整体加载"></a>模块的整体加载</h4><p>除了指定加载某个输出值，还可以使用整体加载，即用星号（*）指定一个对象，所有输出值都加载在这个对象上面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"></div><div class="line">import animal,* as content from &apos;./content&apos;</div><div class="line">let says = content.say();</div><div class="line">console.log(&apos;the $&#123;content.type&#125; says $&#123;says&#125; to $&#123;animal&#125;&apos;)</div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<p>通常星号*结合as一起使用比较合适。</p>
+<h4 id="终极秘籍"><a href="#终极秘籍" class="headerlink" title="终极秘籍"></a>终极秘籍</h4><p>考虑下面的场景：上面的content.js一共输出了三个变量（default, say, type）,假如我们的实际项目当中只需要用到type这一个变量，其余两个我们暂时不需要。我们可以只输入一个变量：<br><code>import { type } from &#39;./content&#39;</code><br>由于其他两个变量没有被使用，我们希望代码打包的时候也忽略它们，抛弃它们，这样在大项目中可以显著减少文件的体积。</p>
+<p>ES6帮我们实现了！<br>不过，目前无论是webpack还是browserify都还不支持这一功能…</p>
+<p>如果你现在就想实现这一功能的话，可以尝试使用rollup.js</p>
+<p>他们把这个功能叫做Tree-shaking，哈哈哈，意思就是打包前让整个文档树抖一抖，把那些并未被依赖或使用的东西统统抖落下去。。。</p>
+<p>看看他们官方的解释吧：<br><code>Normally if you require a module, you import the whole thing. ES2015 lets you just import the bits you need, without mucking around with custom builds. It&#39;s a revolution in how we use libraries in JavaScript, and it&#39;s happening right now.</code></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>以上就是ES6最常用的一些语法，可以说这20%的语法，在ES6的日常使用中占了80%</p>
+<blockquote>
+<p>转自 <a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">https://segmentfault.com/a/1190000004365693</a></p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/26/hello-world/" data-id="cj24wa6jl00004wupouwy30yu" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/02/05/ES6-ES2015核心内容/" data-id="cj24wq5nn0000zsupiw5uoap3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端如何实现图片懒加载-lazyload-提高用户体验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/" class="article-date">
+  <time datetime="2017-01-16T01:55:13.000Z" itemprop="datePublished">2017-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/">前端如何实现图片懒加载(lazyload) 提高用户体验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>图片懒加载又称图片延迟加载，惰性加载，即在用户需要使用图片的时候加载，这样可以减少请求，节省带宽，提高页面加载速度，相对的，也能减少服务器压力。<br>惰性加载是程序人性化的一种体现，提高用户体验，防止一次性加载大量数据，而是根据用户需要进行资源的请求。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>懒加载的难点在于确定某张图片是否用户需要的资源，在浏览器中，用户需要的是可视区的资源，因此我们只需要判断图片是否已经呈现在可视区内，当图片在可视区内时，获取图片的真实地址并赋值给该图片即可（图片宽高需要指定，可以利用padding处理）。<br>判断是否存在于可视区</p>
+<ol>
+<li>浏览器视口高度</li>
+<li>待加载资源距离视口顶端位置<br>通过以上两点即可判断是否位于可视区内。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var nodes = document.querySelectorAll(&quot;img[data-src]&quot;);</div><div class="line">    elem = nodes[0];</div><div class="line">    rect = elem.getBoundingClientRect();</div><div class="line">    vpHeight = document.document.clientHeight;</div><div class="line">if(react.top &lt; vpHeight &amp;&amp; react.bottom &gt;=0)&#123;</div><div class="line">    console.log(&quot;show&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>之后获取图片的真是地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;loading.ggif&quot; alt=&quot;&quot; data-src=&quot;1.gif&quot;&gt;</div><div class="line">...</div><div class="line">&lt;script&gt;</div><div class="line">    var src = elem.dataset.src;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>把真是地址赋给图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var img = new Image();</div><div class="line">img.onload = function()&#123;</div><div class="line">    elem.src = img.src;</div><div class="line">&#125;</div><div class="line">img.src = src;</div></pre></td></tr></table></figure></p>
+<p>完整代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">var scrollElement = document.querySelector(&apos;.page&apos;),</div><div class="line">    viewH = document.documentElement.clientHeight;</div><div class="line"> </div><div class="line">function lazyload()&#123;</div><div class="line">  var nodes = document.querySelectorAll(&apos;img[data-src]&apos;);</div><div class="line"> </div><div class="line">  Array.prototype.forEach.call(nodes,function(item,index)&#123;</div><div class="line">    var rect;</div><div class="line">    if(item.dataset.src===&apos;&apos;) return;</div><div class="line"> </div><div class="line">    rect = item.getBoundingClientRect();</div><div class="line"> </div><div class="line">    if(rect.bottom&gt;=0 &amp;&amp; rect.top &lt; viewH)&#123;</div><div class="line">        (function(item)&#123;</div><div class="line">          var img = new Image();</div><div class="line">          img.onload = function()&#123;</div><div class="line">            item.src = img.src;</div><div class="line">          &#125;</div><div class="line">          img.src = item.dataset.src</div><div class="line">          item.dataset.src = &apos;&apos;</div><div class="line">        &#125;)(item)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"> </div><div class="line">lazyload();</div><div class="line"> </div><div class="line">scrollElement.addEventListener(&apos;scroll&apos;,throttle(lazyload,500,1000));</div><div class="line"> </div><div class="line">function throttle(fun, delay, time) &#123;</div><div class="line">    var timeout,</div><div class="line">        startTime = new Date();</div><div class="line">    return function() &#123;</div><div class="line">        var context = this,</div><div class="line">            args = arguments,</div><div class="line">            curTime = new Date();</div><div class="line">        clearTimeout(timeout);</div><div class="line">        if (curTime - startTime &gt;= time) &#123;</div><div class="line">            fun.apply(context, args);</div><div class="line">            startTime = curTime;</div><div class="line">        &#125; else &#123;</div><div class="line">            timeout = setTimeout(fun, delay);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h4><p>为了方便演示，demo里给img.onload 添加了500ms延时,<a href="http://funteas.com/lab/lazyload/" target="_blank" rel="external">demo连接请点击这里</a>;</p>
+<hr>
+<h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><p>以上内容转载自微信公众号Javascript<a href="http://mp.weixin.qq.com/s?__biz=MzAwNjI5MTYyMw==&amp;mid=2651493537&amp;idx=1&amp;sn=0f6db2549c28f475333e82ef7530aa8c&amp;chksm=80f19d69b786147f1465e36ee0892f320cdd3f9021ba57e73395d4c82b8867465be3ca407bae&amp;mpshare=1&amp;scene=23&amp;srcid=0116Azl2wOfbNq5VGffShYZA#rd" target="_blank" rel="external">前端如何实现图片懒加载(lazyload) 提高用户体验</a></p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>在dedecms织梦中已经有这个功能了，而Jquery插件当然也少不了，比如这个<a href="http://www.antcome.com/site/2944.html" target="_blank" rel="external">JQuery LazyLoad</a>;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/" data-id="cj24wq5ny0003zsupjap7vndy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo系列教程（二）-更换主题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/02/hexo系列教程（二）-更换主题/" class="article-date">
+  <time datetime="2016-07-02T10:04:03.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/02/hexo系列教程（二）-更换主题/">hexo系列教程（二）:更换主题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一套好的皮肤是博客必不可少的元素，以下是以<code>Maupassant</code>主题作为教程。</p>
+<h3 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h3><p>在博客根目录下，安装主题和渲染器：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git clone https:<span class="comment">//github.com/tufu9441/maupassant-hexo.git themes/maupassant</span></div><div class="line">$ npm install hexo-renderer-jade --save</div><div class="line">$ npm install hexo-renderer-sass --save</div></pre></td></tr></table></figure></p>
+<p>编辑Hexo目录下的 _config.yml，将theme的值改为maupassant。<br>注：若npm install hexo-renderer-sass安装时报错，可能是国内网络问题，请尝试使用代理或者切换至淘宝NPM镜像安装，感谢光头强提供的<a href="http://rockcoding.com/2016/03/02/hexo/">方法</a>。</p>
+<h3 id="功能配置"><a href="#功能配置" class="headerlink" title="功能配置"></a>功能配置</h3><p>默认配置：(文件路径：<code>\themes\maupassant\_config.yml</code>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">fancybox: true ## If you want to use fancybox please set the value to true.</div><div class="line">duoshuo: ## Your duoshuo_shortname, e.g. username</div><div class="line">disqus: ## Your disqus_shortname, e.g. username</div><div class="line">google_search: true ## Use Google search, true/false.</div><div class="line">baidu_search: ## Use Baidu search, true/false.</div><div class="line">swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT</div><div class="line">tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293</div><div class="line">self_search: ## Use a jQuery-based local search engine, true/false.</div><div class="line">google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2</div><div class="line">baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000</div><div class="line">show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.</div><div class="line">shareto: true ## If you want to use the share button please set the value to true.</div><div class="line">busuanzi: true ## If you want to use Busuanzi page views please set the value to true.</div><div class="line">widgets_on_small_screens: false ## Set to true to enable widgets on small screens.</div><div class="line">menu:</div><div class="line">  - page: home</div><div class="line">    directory: .</div><div class="line">    icon: fa-home</div><div class="line">  - page: archive</div><div class="line">    directory: archives/</div><div class="line">    icon: fa-archive</div><div class="line">  - page: about</div><div class="line">    directory: about/</div><div class="line">    icon: fa-user</div><div class="line">  - page: rss</div><div class="line">    directory: atom.xml</div><div class="line">    icon: fa-rss</div><div class="line">widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.</div><div class="line">  - search</div><div class="line">  - category</div><div class="line">  - tag</div><div class="line">  - recent_posts</div><div class="line">  - recent_comments</div><div class="line">  - links</div><div class="line">links:</div><div class="line">  - title: site-name1</div><div class="line">    url: http://www.example1.com/</div><div class="line">  - title: site-name2</div><div class="line">    url: http://www.example2.com/</div><div class="line">  - title: site-name3</div><div class="line">    url: http://www.example3.com/</div><div class="line">    </div><div class="line">timeline:</div><div class="line">  - num: 1</div><div class="line">    word: 2014/06/12-Start</div><div class="line">  - num: 2</div><div class="line">    word: 2014/11/29-XXX</div><div class="line">  - num: 3</div><div class="line">    word: 2015/02/18-DDD</div><div class="line">  - num: 4</div><div class="line">    word: More</div><div class="line">    </div><div class="line"># Static files</div><div class="line">js: js</div><div class="line">css: css</div><div class="line"># Theme version</div><div class="line">version: 0.0.0</div></pre></td></tr></table></figure></p>
+<p><strong> fancybox - 是否启用Fancybox图片灯箱效果
+</strong> duoshuo - 多说评论 shortname<br><strong> disqus - Disqus评论 shortname
+</strong> google_search - 默认使用Google搜索引擎<br><strong> baidu_search - 若想使用百度搜索，将其设定为true。
+</strong> swiftype - Swiftype 站内搜索key</p>
+<ul>
+<li>tinysou - 微搜索 key</li>
+<li>self_search - 基于jQuery的本地搜索引擎，需要安装hexo-generator-search插件使用。</li>
+<li>google_analytics - Google Analytics 跟踪ID</li>
+<li>baidu_analytics - 百度统计 跟踪ID</li>
+<li>show_category_count - 是否显示侧边栏分类数目</li>
+<li>shareto - 是否使用分享按鈕</li>
+<li>busuanzi - 是否使用不蒜子页面访问计数</li>
+<li>widgets_on_small_screens - 是否在移动设备屏幕底部显示侧边栏</li>
+<li>menu - 自定义页面及菜单，依照已有格式填写。填写后请在source目录下建立相应名称的文件夹，并包含index.md文件，以正确显示页面。导航菜单中集成了FontAwesome图标字体，可以在这里选择新的图标，并按照相关说明使用。</li>
+<li>widgets - 选择和排列希望使用的侧边栏小工具。</li>
+<li>links - 友情链接，请依照格式填写。</li>
+<li>timeline - 网站历史时间线，在页面front-matter中设置layout: timeline可显示。</li>
+<li>Static files - 静态文件存储路径，方便设置CDN缓存。</li>
+<li>Theme version - 主题版本，便于静态文件更新后刷新CDN缓存。<h3 id="主题特性"><a href="#主题特性" class="headerlink" title="主题特性"></a>主题特性</h3><h4 id="网站图标"><a href="#网站图标" class="headerlink" title="网站图标"></a>网站图标</h4>若要设置网站Favicon，可以将favicon.ico放在Hexo根目录的source文件夹下，建议的大小：32px*32px。</li>
+</ul>
+<p>若要为网站添加苹果设备图标，请将命名为apple-touch-icon.png的图片放在同样的位置，建议的大小：114px*114px。</p>
+<h4 id="文章摘要"><a href="#文章摘要" class="headerlink" title="文章摘要"></a>文章摘要</h4><p>首页默认显示文章摘要而非全文，可以在文章的front-matter中填写一项description:来设置你想显示的摘要，或者直接在文章内容中插入
+        
+          <p class="article-more-link">
+            <a href="/2016/07/02/hexo系列教程（二）-更换主题/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/02/hexo系列教程（二）-更换主题/" data-id="cj24wq5nw0002zsuphvy4mibg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Sublime-Text3-使用Markdown实时预览教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/" class="article-date">
+  <time datetime="2016-06-22T09:18:07.000Z" itemprop="datePublished">2016-06-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/">Sublime Text3 使用Markdown实时预览教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="这是一个在Sublime-Text3-使用Markdown实时预览教程。"><a href="#这是一个在Sublime-Text3-使用Markdown实时预览教程。" class="headerlink" title="这是一个在Sublime Text3 使用Markdown实时预览教程。"></a>这是一个在Sublime Text3 使用Markdown实时预览教程。</h3><hr>
+<p>打开Sublime Text3 ，打开包管理器 <code>Ctrl + Alt + P</code> ,接着安转包<code>pcip</code> 选中<code>Package Control :Install Package</code>, 如下图<br>    <img src="http://img.blog.csdn.net/20161026023243178" alt=""><br>    回车，等待数据更新，完成后会主动显示软件列表。<br>    在里面输入以下软件名称并回车进行安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Markdown Editing    // Markdown编辑和语法高亮支持 </div><div class="line">Markdown Preview    // Markdown导出html预览支持 </div><div class="line">auto-save           // 可自定义的自动保存功能</div></pre></td></tr></table></figure></p>
+<p>耐心等待操作完成，看到success就成功，之后关闭并重新打开Sublime Text 3.<br>在sublime下<code>.md</code>文件用快捷键<code>ctrl + M</code>应该就可以在浏览器预览。<br>    <img src="http://oisa4f1vi.bkt.clouddn.com/markdown1.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/" data-id="cj24wq5nr0001zsupdmxtux59" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端面试知识点锦集（JavaScript篇）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/11/前端面试知识点锦集（JavaScript篇）/" class="article-date">
+  <time datetime="2016-06-11T06:15:16.000Z" itemprop="datePublished">2016-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/11/前端面试知识点锦集（JavaScript篇）/">前端面试知识点锦集（JavaScript篇）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ol>
+<li><a href="#1">谈谈你对ajax的理解？（概念、特点、作用）</a></li>
+<li><a href="#2">说说你对延迟对象deferred的理解</a></li>
+<li><a href="#3">什么是跨域，如何实现跨域访问?</a></li>
+<li><a href="#4">为什么要使用模板引擎？</a></li>
+<li><a href="#5">JavaScript是一门什么样的语言，它有哪些特点？</a></li>
+<li><a href="#6">JavaScript的数据类型有哪些？</a></li>
+<li><a href="#7">根据你的理解,请简述JavaScript脚本的执行原理?</a></li>
+<li><a href="#8">DOM操作怎样添加、移除、移动、复制、创建和查找节点?</a></li>
+<li><a href="#9">说说你对json的理解?</a></li>
+<li><a href="#10">ionic和angularjs的区别?</a></li>
+<li><a href="#11">谈谈你对闭包的理解</a></li>
+<li><a href="#12">谈谈你对this的理解？</a></li>
+<li><a href="#13">JavaScript对象的几种创建方式?</a></li>
+<li><a href="#14">get和post的区别,何时使用post</a></li>
+<li><a href="#15">null和undefined的区别？</a></li>
+<li><a href="#16">请你解释一下事件冒泡机制</a></li>
+<li><a href="#17">说你对原型（prototype）理解?</a></li>
+<li><a href="#18">typeof与instanceof的区别是什么？</a></li>
+</ol>
+<p></p><h3 id="1">1、谈谈你对ajax的理解？（概念、特点、作用）</h3><br>AJAX全称为“Asynchronous Javascript And XML”（异步Javascript和XML）是指一种创建交互式网页应用的开发技术、改善用户体验、实现无刷新效果。<p></p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>a、不需要插件支持<br>b、优秀的用户体验<br>c、提高Web程序的性能<br>d、减轻服务器和带宽的负担</p>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>a、破坏浏览器“前进”、“后退”按钮的正常功能，可以通过简单的插件弥补<br><img src="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAOiaKsjtJSV26WXcQVM505zU4wEIPEQSlQkHB4ckq9K0ic1UNicmWHBB9FRdANrhW1B2SW9U1gI7HRyA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>b、对搜索引擎的支持不足</p>
+<p></p><h3 id="2">2、说说你对延迟对象deferred的理解</h3><br>deferred对象是从jQuery 1.5.0版本开始引入的一个新功能。<p></p>
+<h4 id="a、什么是deferred对象"><a href="#a、什么是deferred对象" class="headerlink" title="a、什么是deferred对象"></a>a、什么是deferred对象</h4><p>开发网站的过程中，我们经常遇到某些耗时很长的javascript操作。其中，既有异步的操作（比如ajax读取服务器数据），也有同步的操作（比如遍历一个大型数组），它们都不是立即能得到结果的。<br>通常的做法是，为它们指定回调函数（callback）。即事先规定，一旦它们运行结束，应该调用哪些函数。<br>但是，在回调函数方面，jQuery的功能非常弱。为了改变这一点，jQuery开发团队就设计了deferred对象。<br>简单说，deferred对象就是jQuery的回调函数解决方案。在英语中，defer的意思是”延迟”，所以deferred对象的含义就是”延迟”到未来某个点再执行。<br>它解决了如何处理耗时操作的问题，对那些操作提供了更好的控制，以及统一的编程接口。</p>
+<h4 id="b、它的主要功能，可以归结为四点："><a href="#b、它的主要功能，可以归结为四点：" class="headerlink" title="b、它的主要功能，可以归结为四点："></a>b、它的主要功能，可以归结为四点：</h4><p>(1)、实现链式操作<br>(2)、指定同一操作的多个回调函数<br>(3)、为多个操作指定回调函数<br>(4)、普通操作的回调函数接口</p>
+<p></p><h3 id="3">3、什么是跨域，如何实现跨域访问?</h3><br>跨域是指不同域名之间互相访问。<br>JavaScript同源策略的限制，A域名下的JacaScript无法操作B域名下的对象。<br><img src="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAOiaKsjtJSV26WXcQVM505zUjQHmHtwHwgboulZgNUibFwzqoeWAU0yvRZcicKeqqT8ib9ibjWsNia7OOlg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br><img src="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAOiaKsjtJSV26WXcQVM505zUnTvvXOrPMHYhUciaQHyDgWQbe5P9t3PQspOuTX6YjNGAkHOnRTUu58w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""><p></p>
+<h4 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h4><p>（1）、JSONP跨域：利用javascript脚本允许引用不用域下的js实现的，将回调方法带入服务器，返回结果时回调。<br>（2）、跨域资源共享（CORS）：跨域资源共享（CORS）是一种网络浏览器的技术规范，它为Web服务器定义了一种方式，允许网页从不同的域访问其资源。</p>
+<h4 id="CORS与JSONP相比："><a href="#CORS与JSONP相比：" class="headerlink" title="CORS与JSONP相比："></a>CORS与JSONP相比：</h4><p>a、JSONP只能实现GET请求，而CORS支持所有的类型的HTTP请求；<br>b、使用CORS，开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理；<br>c、JSONP主要被老的浏览器支持，他们往往不支持CORS，而绝大数现代浏览器已经支持了CORS。</p>
+<p></p><h3 id="4">4、为什么要使用模板引擎？</h3><br>a、模板引擎（这里特指用于Web开发的模板引擎）是为了使用户与业务数据（内容）相分离而产生的，它可以生成特定格式的文档，用于网站的模板引擎就会生成一个标准的HTML文档。<br>b、在一些实例中javascript有大量的html字符串，html中有一些像click样的javascript，这样的javascript中有html，html有javascript，代码耦合度很高，不便于修改与维护，使用模板引擎可以解决问题。<p></p>
+<p></p><h3 id="5">5、JavaScript是一门什么样的语言，它有哪些特点？</h3><br>JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。<br>JS 的主要特点：<br>a、语法类似于常见的高级语言，如 C 和 Java；<br>b、脚本语言，不需要编译就可以由解释器直接运行；<br>c、 变量松散定义，属于弱类型语言；<br>d、面向对象的。<br>JS 最初是为网页设计而开发的，现在也是Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和HTML 文档（文档对象模型，DOM）进行操作而使网页呈现动态的交互特性。<br>严格的说，JS只是ECMAScript 的一种实现，是ECMAScript和BOM、DOM组成的一种Web 开发技术。<p></p>
+<p></p><h3 id="6">6、JavaScript的数据类型有哪些？</h3><br>基本数据类型：字符串String，数字Number，布尔Boolean<br>复合数据类型：数组Array，对象Object<br>特殊数据类型：Null空对象，未定义Undefined<p></p>
+<p></p><h3 id="7">7、根据你的理解,请简述JavaScript脚本的执行原理?</h3><br>JavaScript是一种动态、弱类型、基于原型的语言，通过浏览器可以直接执行。<br>当浏览器遇到<code>&lt;script&gt;</code> 标记的时候，浏览器会执行之间的javascript代码。嵌入的js代码是顺序执行的，每个脚本定义的全局变量和函数，都可以被后面执行的脚本所调用。 变量的调用，必须是前面已经声明，否则获取的变量值是undefined。<p></p>
+<p></p><h3 id="8">8、DOM操作怎样添加、移除、移动、复制、创建和查找节点?</h3><p></p>
+<h4 id="（1）创建新节点"><a href="#（1）创建新节点" class="headerlink" title="（1）创建新节点"></a>（1）创建新节点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">createDocumentFragment() //创建一个DOM片段</div><div class="line">createElement()          //创建一个具体节点</div><div class="line">createTextNode()        //创建一个文本节点</div></pre></td></tr></table></figure>
+<h4 id="（2）添加、移出、替换、插入"><a href="#（2）添加、移出、替换、插入" class="headerlink" title="（2）添加、移出、替换、插入"></a>（2）添加、移出、替换、插入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">appendChild();</div><div class="line">removeChild();</div><div class="line">replaceChild();</div><div class="line">insertBefore();     //在已有的子节点前插入一个新的子节点</div></pre></td></tr></table></figure>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">getElementById();   //找ID</div><div class="line">getElementsByClassName();   //找Class</div><div class="line">getElementsByName();    //通过元素的name属性的值</div><div class="line">getElementsByTagName(); //通过标签名字</div></pre></td></tr></table></figure>
+<p></p><h3 id="9">说说你对json的理解?</h3><p></p>
+<h4 id="（1）"><a href="#（1）" class="headerlink" title="（1）"></a>（1）</h4><p>a、JSON对象：以“{”开始，以“}”结束，里面则是一系列的键（key）值（value）对，键和值用“:”分开，每对键值对之间用“,”分开。参考以下语法结构：{key1:value1,key2:value2,key3:value3…}其中键（key）是字符串，而值（value）可以是字符串，数值，true,false,null,对象或数组，也就是说某个键（key）的值（value）可以是一个数组，数组里面又是一些JSON对象，这种表示稍微复杂一些，但是参照这些理解可以很容易分辨出来。<br>b、JSON数组：以”[”开始，”]”结束，如同程序语言一样，例如C#，Button[] btnArray,则BtnArray是一个Button类型的数组，里面就存放Button类型的对象，那么JSON数组也一样，里面存放的也是JSON对象.</p>
+<h4 id="（2）"><a href="#（2）" class="headerlink" title="（2）"></a>（2）</h4><p>a、JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）<br>b、JSON 是轻量级的文本数据交换格式，并不是编程语言<br>c、JSON 独立于语言存在<br>d、JSON 具有自我描述性，更易理解<br>e、JSON 可以将 JavaScript 对象中表示的一组数据转换为字符串，然后就可以在函数之间轻松地传递这个字符串，或者在异步应用程序中将字符串从 Web 客户机传递给服务器端程序。这个字符串看起来有点儿古怪，但是JavaScript很容易解释它，而且 JSON 可以表示比”名称 / 值对”更复杂的结构。例如，可以表示数组和复杂的对象，而不仅仅是键和值的简单列表</p>
+<h4 id="（3）"><a href="#（3）" class="headerlink" title="（3）"></a>（3）</h4><p>SON(JavaScript Object Notation) 是一种轻量级的数据交换格式。<br>它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小.<br>json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。<br>(1)、对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}的键值对的结构，在面向对象的语言中，key为对象的属性，value为对应的属性值，所以很容易理解，取值方法为 对象.key 获取属性值，这个属性值的类型可以是 数字、字符串、数组、对象几种。<br>(2)、数组：数组在js中是中括号“[]”括起来的内容，数据结构为 [“java”,”javascript”,”vb”,…]，取值方式和所有语言中一样，使用索引获取，字段值的类型可以是数字、字符串、数组、对象几种。<br>经过对象、数组2种结构就可以组合成复杂的数据结构了</p>
+<p></p><h3 id="10">ionic和angularjs的区别？</h3><br>a、ionic是一个用来开发混合手机应用的、开源的、免费的代码库。可以优化html、css和js的性能，构建高效的应用程序，而且还可以用于构建sass和AngularJs的优化。<br>b、AngularJS通过新的属性和表达式扩展了HTML。AngularJS可以构建一个单一页面应用程序（SPAs：Single Page Applications）。<br>c、ionic是一个混合APP开发工具，它以AngularJs为中间脚本工具（称为库，似乎又不恰当），所以，你如果要使用ionic开发APP，就必须了解AngularJS<p></p>
+<p></p><h3 id="11">谈谈你对闭包的理解</h3><br>（1）、使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免污染全局变量，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄漏。<br>（2）、闭包的3个特性：<br>a、函数嵌套函数<br>b、函数内部可以引用函数外部变量<br>c、参数和变量不会被垃圾回收机制回收<p></p>
+<p></p><h3 id="12">谈谈你对this的理解？</h3><p></p>
+<h4 id="回答一："><a href="#回答一：" class="headerlink" title="回答一："></a>回答一：</h4><p>(1)、js的this指向是不确定的，也就是说是可以动态改变的。call/apply 就是用于改变this指向的函数，这样设计可以让代码更加灵活，复用性更高<br>(2)、this 一般情况下，都是指向函数的拥有者。<br>(3)、在函数自执行里，this 指向的是 window 对象。<br><strong>扩展：关于this，还有一个地方比较让人模糊的是在dom事件里，通常有如下3种情况： </strong><br>a、使用标签属性注册事件，此时this指向的是window对象。<br>b、对与a，要让this指向input，可以将this作为参数传递。<br>c、使用addEventListener等注册事件。此时this也是指向 input。</p>
+<h4 id="回答二："><a href="#回答二：" class="headerlink" title="回答二："></a>回答二：</h4><p>(1)、处于全局作用域下的this：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this; /*window*/</div><div class="line">var a = &#123;name:this&#125; /*window*/</div><div class="line">var b = [this] /*window*/</div></pre></td></tr></table></figure></p>
+<p>在全局作用域下，this默认指向window对象。<br>(2)、处在函数中的this，又分为以下几种情况：<br>a、一般定义的函数，然后一般的执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = function()&#123;</div><div class="line">console.log(this);</div><div class="line">&#125;</div><div class="line">a();/*window*/</div></pre></td></tr></table></figure></p>
+<p>this还是默认指向window。<br>b、一般定义，用new调用执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = function()&#123;</div><div class="line">console.log(this);</div><div class="line">&#125;</div><div class="line">new a();/*新建的空对象*/</div></pre></td></tr></table></figure></p>
+<p>这时候让this指向新建的空对象，我们才可以给空对象初始化自有变量<br>c、作为对象属性的函数，调用时：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a = &#123;</div><div class="line">f:function()&#123;</div><div class="line">console.log(this)</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">a.f();/*a对象*/</div></pre></td></tr></table></figure></p>
+<p>(3)、通过call()和apply()来改变this的默认引用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var b = &#123;id: &apos;b&apos;&#125;;</div><div class="line">var a = &#123;</div><div class="line">f:function()&#123;</div><div class="line">console.log(this)</div><div class="line">　&#125;</div><div class="line">&#125;</div><div class="line">a.f.call(b);/*window*/</div></pre></td></tr></table></figure></p>
+<p>所有函数对象都有的call方法和apply方法，它们的用法大体相似，f.call(b);的意思 是，执行f函数，并将f函数执行期活动对象里的this指向b对象，这样标示符解析时，this就会是b对象了。不过调用函数是要传参的。所以，f.call(b, x, y); f.apply(b, [x, y]);好吧，以上就是用call方法执行f函数，与用apply方法执行f函数时传参方式，它们之间的差异，大家一目了然：apply通过数组的方式传递参数，call通过一个个的形参传递参数。<br>(4)、一些函数特殊执行情况this的指向问题：<br>a、setTimeout()和setInverval():<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = function()&#123;</div><div class="line">console.log(this);</div><div class="line">&#125;</div><div class="line">setTimeout(a,0);/*window*/</div></pre></td></tr></table></figure></p>
+<p>setInterval()类似。<br>b、dom模型中触发事件的回调方法执行中活动对象里的this指向该dom对象。</p>
+<p></p><h3 id="13">13、JavaScript对象的几种创建方式?</h3><p></p>
+<h4 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="(1)工厂模式"></a>(1)工厂模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function()&#123;</div><div class="line">    var Child = new Object();</div><div class="line">    Child.name=&quot;test&quot;;</div><div class="line">    Child.age=&quot;20&quot;;</div><div class="line">    return Child;</div><div class="line">&#125;;</div><div class="line">var x = Parent();</div></pre></td></tr></table></figure>
+<p>引用该对象的时候，这里使用的是 var x = Parent()而不是 var x = new Parent();因为后者会可能出现很多问题（前者也成为工厂经典方式,后者称之为混合工厂方式），不推荐使用new的方式使用该对象</p>
+<h4 id="2-构造函数方式"><a href="#2-构造函数方式" class="headerlink" title="(2)构造函数方式"></a>(2)构造函数方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function()&#123;</div><div class="line">    this.name=&quot;test&quot;;</div><div class="line">    this.age=&quot;20&quot;;</div><div class="line">&#125;;</div><div class="line">var x = new Parent();</div></pre></td></tr></table></figure>
+<h4 id="3-原型模式"><a href="#3-原型模式" class="headerlink" title="(3) 原型模式"></a>(3) 原型模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function Parent()&#123;</div><div class="line">&#125;;</div><div class="line">Parent.prototype.name = &quot;test&quot;;</div><div class="line">Parent.prototype.age = &quot;20&quot;;</div><div class="line">var x = new Parent();</div></pre></td></tr></table></figure>
+<h4 id="4-混合的构造函数，原型方式（推荐）"><a href="#4-混合的构造函数，原型方式（推荐）" class="headerlink" title="(4)混合的构造函数，原型方式（推荐）"></a>(4)混合的构造函数，原型方式（推荐）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Parent()&#123;</div><div class="line">　　this.name=&quot;欲泪成雪&quot;;</div><div class="line">　　this.age=22;</div><div class="line">&#125;;</div><div class="line">Parent.prototype.lev=function()&#123;</div><div class="line">　　return this.name;</div><div class="line">&#125;;</div><div class="line">var x =new Parent();</div></pre></td></tr></table></figure>
+<h4 id="5-动态原型方式"><a href="#5-动态原型方式" class="headerlink" title="(5)动态原型方式"></a>(5)动态原型方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Parent()&#123;</div><div class="line">　　this.name=&quot;欲泪成雪&quot;;</div><div class="line">　　this.age=22;</div><div class="line">;</div><div class="line">if(typeof Parent._lev==&quot;undefined&quot;)&#123;</div><div class="line">Parent.prototype.lev=function()&#123;</div><div class="line">　　return this.name;</div><div class="line">&#125;</div><div class="line">Parent._lev=true;</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">var x =new Parent();</div></pre></td></tr></table></figure>
+<p></p><h3 id="14">14、get和post的区别,何时使用post</h3><br>(1)、get 是从服务器上获取数据，post 是向服务器传送数据。 get 请求返回 request - URI 所指出的任意信息。Post 请求用来发送电子邮件、新闻或发送能由交互用户填写的表格。这是唯一需要在请求中发送body的请求。使用Post请求时需要在报文首部 Content - Length 字段中指出body的长度。<br>(2)、get 是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址，用户看不到这个过程。<br>(3)、对于 get 方式，服务器端用Request.QueryString获取变量的值，对于 post 方式，服务器端用Request.Form获取提交的数据。<br>(4)、get 传送的数据量较小，不能大于2KB。post 传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。 用IIS过滤器的只接受get参数，所以一般大型搜索引擎都是用get方式。<br>(5)get安全性非常低，post 安全性相对较高。如果这些数据是中文数据而且是<br>非敏感数据，那么使用get；如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 post 为好<p></p>
+<p></p><h3 id="15">15、null和undefined的区别？</h3><br>（1）、null是一个表示“无”的对象，转为 数值时为0；undefined是一个表示“无”的原始值，转为数值为NaN。当声明的变量还未被初始化，变量的默认值为undefined。<br>(2)、null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。<br>(3)、undefined表示”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：<br>a、变量被声明了，但没有赋值时，就等于undefined。<br>b、调用函数时，应该提供的参数没有提供，该参数等于undefined。<br>c、对象没有赋值的属性，该属性的值为undefined。<br>d、函数没有返回值时，默认返回undefined。<br>(4)、null表示”没有对象”，即该处不应该有值。典型用法是：<br>a、作为函数的参数，表示该函数的参数不是对象。<br>b、作为对象原型链的终点。<p></p>
+<p></p><h3 id="16">16、请你解释一下事件冒泡机制</h3><br>a、在一个对象上触发某类事件（比如单击onclick事件），如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播，从里到外，直至它被处理（父级对象所有同类事件都将被激活），或者它到达了对象层次的最顶层，即document对象（有些浏览器是window）。<br>b、冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发<br>c、js冒泡机制是指如果某元素定义了事件A，如click事件，如果触发了事件之后，没有阻止冒泡事件，那么事件将向父级元素传播，触发父类的click函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//阻止冒泡时间方法，兼容ie(e.cancleBubble)和ff(e.stopProgation)</div><div class="line">function stopBubble(e)&#123;</div><div class="line">var evt = e||window.event;</div><div class="line">evt.stopPropagation?evt.stopPropagation():(evt.cancelBubble=true);//阻止冒泡</div><div class="line">evt.preventDefault</div></pre></td></tr></table></figure><p></p>
+<p></p><h3 id="17">17、说说你对原型（prototype）理解?</h3><br>JavaScript是一种通过原型实现继承的语言与别的高级语言是有区别的，像java，C#是通过类型决定继承关系的，JavaScript是的动态的弱类型语言，总之可以认为JavaScript中所有都是对象，在JavaScript中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” prototype”内部属性，这个属性所对应的就是该对象的原型。<p></p>
+<p>“prototype”作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome内核的JavaScript引擎中提供了”proto“这个非标准的访问器（ECMA新标准中引入了标准对象原型访问器”Object.getPrototype(object)”）。</p>
+<p>原型的主要作用就是为了实现继承与扩展对象。</p>
+<p></p><h3 id="18">18、typeof与instanceof的区别是什么？</h3><p></p>
+<h4 id="在-JavaScript-中，判断一个变量的类型可以用typeof"><a href="#在-JavaScript-中，判断一个变量的类型可以用typeof" class="headerlink" title="在 JavaScript 中，判断一个变量的类型可以用typeof"></a>在 JavaScript 中，判断一个变量的类型可以用typeof</h4><p>(1)、数字类型， typeof 返回的值是 number。比如说：typeof(1)，返回值是number<br>(2)、字符串类型， typeof 返回的值是 string。比如typeof(“123”)返回值是string。<br>(3)、布尔类型， typeof 返回的值是 boolean 。比如typeof(true)返回值是boolean。<br>(4)、对象、数组、null 返回的值是 object 。比如typeof(window)，typeof(document)，typeof(null)返回的值都是object。<br>(5)、函数类型，返回的值是 function。比如：typeof(eval)，typeof(Date)返回的值都是function。<br>(6)、不存在的变量、函数或者undefined，将返回undefined。比如：typeof(abc)、typeof(undefined)都返回undefined。</p>
+<h4 id="在-JavaScript-中-instanceof用于判断某个对象是否被另一个函数构造。"><a href="#在-JavaScript-中-instanceof用于判断某个对象是否被另一个函数构造。" class="headerlink" title="在 JavaScript 中,instanceof用于判断某个对象是否被另一个函数构造。"></a>在 JavaScript 中,instanceof用于判断某个对象是否被另一个函数构造。</h4><p>使用 typeof 运算符时采用引用类型存储值会出现一个问题，无论引用的是什么类型的对象，它都返回 “object”。ECMAScript 引入了另一个 Java 运算符 instanceof 来解决这个问题。instanceof 运算符与 typeof 运算符相似，用于识别正在处理的对象的类型。与 typeof 方法不同的是，instanceof 方法要求开发者明确地确认对象为某特定类型。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/11/前端面试知识点锦集（JavaScript篇）/" data-id="cj24wq5nz0004zsup1p0u21z2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo_teach_1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/04/hexo_teach_1/" class="article-date">
+  <time datetime="2016-06-03T16:00:00.000Z" itemprop="datePublished">2016-06-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/04/hexo_teach_1/">hexo系列教程（一）:安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过一番折腾，总算把hexo搞出来，域名用的是阿里云的，服务器也没买，用的是github.io，主题为：<a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="external">hexo 大道至简</a>的Maupassant，自动给我们做了响应式处理，简洁好用；然后还少不了hexo后台管理：<a href="https://github.com/dworthen/js-yaml-front-matter" target="_blank" rel="external">hexo-admin</a> ,这个具体后面章节会讲到。那么，让我们进入正题:</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p><img src="http://oisa4f1vi.bkt.clouddn.com/hexo1.jpg" alt=""><br>首先声明，本教程所针对的是windows用户。</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载并安装<a href="http://pan.baidu.com/s/1miqAjlY?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;stoken=ae3a8cde136756fe8a3f562fe9b9fc5fdd70030ad225550fd208f087bf7203d6a50d4f37bdfc6775915119c77ff7ba4447685489bbd9d9394808504dcffb66e74345ded2be9b&amp;bduss=259879ba8d8a40e3f807ed3f277d37a3a270164da657411591bee758e02e1cbe9ea19500aca30a0568414378a8a340c6b4ec44dd6507d6d57d841eafa681142c7848f69d8609458f824b2528046eef8d908c64c15f5c65583f5306488528fb1f5a8b44eee1ed8b8e2b4573d29bbba2bb606d70d8a6931cb0be6bba34da5dea3ad650eea7f36d0624f8044490a688ca4586067141f1ac957b163216fc0e9769cd5445cea1eda2150eda9dea1c5500e944176290744a88a4c097fa021d6153c3e23a163f56f825&amp;ssnerror=0" target="_blank" rel="external">git</a>，如果你想了解点Git的基础命令，我推荐以下博文：<a href="http://opiece.me/2015/04/06/git-basic-commands/" target="_blank" rel="external">Git常用的基础命令</a>，<a href="http://blog.csdn.net/v123411739/article/details/44071059/" target="_blank" rel="external">史上最全github使用方法：github入门到精通</a>,当然即使你不懂Git的命令，跟着本博文走，也完全没问题。</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装前先介绍几个hexo常用的命令,#后面为注释。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo g #完整命令为hexo generate，用于生成静态文件  </div><div class="line">$ hexo s #完整命令为hexo server，用于启动服务器，主要用来本地预览  </div><div class="line">$ hexo d #完整命令为hexo deploy，用于将本地文件发布到github上  </div><div class="line">$ hexo n #完整命令为hexo new，用于新建一篇文章</div></pre></td></tr></table></figure>
+<p>鼠标右键任意地方，选择Git Bash，使用以下命令安装hexo<strong>（ps：以下命令中的$符号只为了让教程和实际看起来一致，实际输入命令只需输入$ 后面的命令即可）</strong><br><code>$ npm install hexo-cli -g</code></p>
+<p>如果之后在使用的过程中，遇到以下的错误<br><code>ERROR Deployer not found : github</code></p>
+<p>则运行以下命令,或者你直接先运行这个命令更好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p>接下来创建放置博客文件的文件夹：hexo文件夹。在自己想要的位置创建文件夹，如我hexo文件夹的位置为E:\hexo，名字和地方可以自由选择，当然最好不要放在中文路径下，至于原因，我想很多人懂得。之后进入文件夹，即E:\hexo内，点击鼠标右键，选择Git Bash，执行以下命令，Hexo会自动在该文件夹下下载搭建网站所需的所有文件。<br><code>$ hexo init</code></p>
+<p>安装依赖包<br><code>$ npm install</code></p>
+<p>让我们看看刚刚下载的hexo文件带来了什么，在E:\hexo内执行以下命令，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<p>然后用浏览器访问<a href="http://localhost:4000/，此时，你应该看到了一个漂亮的博客了，当然这个博客只是在本地的，别人是看不到的，hexo3.0使用的默认主题是landscape。轻轻松松就看到了一点成果，是不是很激动，这就是hexo的强大之处，这个本地预览的功能，我真是爱不释手。(其实我建议使用sublime的[markdown预览插件](http://blog.csdn.net/marksinoberg/article/details/50993456" target="_blank" rel="external">http://localhost:4000/，此时，你应该看到了一个漂亮的博客了，当然这个博客只是在本地的，别人是看不到的，hexo3.0使用的默认主题是landscape。轻轻松松就看到了一点成果，是不是很激动，这就是hexo的强大之处，这个本地预览的功能，我真是爱不释手。(其实我建议使用sublime的[markdown预览插件](http://blog.csdn.net/marksinoberg/article/details/50993456</a>))</p>
+<h3 id="注册Github帐号"><a href="#注册Github帐号" class="headerlink" title="注册Github帐号"></a>注册Github帐号</h3><p>已经有Github帐号跳过此步，首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>进行注册，用户名、邮箱和密码之后都需要用到，自己记好。</p>
+<h3 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h3><p>repository相当于一个仓库，用来放置你的代码文件。首先，登陆进入Github，并进入个人页面，选择Repositories(下图第一个红圈的地方)，然后<code>New</code>一个repository(下图第二个红圈的地方)<br><img src="http://opiece.me/images/article/hexo-guide-4.png" alt=""></p>
+<p>创建时，只需要填写Repository name即可，当然这个名字的格式必须为youname.github.io，例如我的为huangjunhui.github.io<br><img src="http://opiece.me/images/article/hexo-guide-5.png" alt=""></p>
+<h3 id="部署本地文件到github"><a href="#部署本地文件到github" class="headerlink" title="部署本地文件到github"></a>部署本地文件到github</h3><p>既然Repository已经创建了，当然是先把博客放到<code>Github</code>上去看看效果。编辑<code>E：\hexo</code>下的<code>_config.yml</code>文件，建议使用Notepad++。<br>在<code>_config.yml</code>最下方，添加如下配置(命令中的第一个huangjunhui为Github的用户名,第二个huangjunhui为之前New的Repository的名字记得改成自己的。另外记得一点，hexo的配置文件中任何’:’后面都是带一个空格的),如果配置以下命令出现<code>ERROR Deployer not found : github</code>，则参考上文的解决方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: http://github.com/huangjunhui/huangjunhui.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>配置好_config.yml并保存后，执行以下命令部署到Github上。如果你是第一次使用Github或者是已经使用过，但没有配置过SSH，则可能需要配置一下，具体方法<a href="http://blog.csdn.net/v123411739/article/details/44071059/" target="_blank" rel="external">史上最全github使用方法：github入门到精通</a>里面有介绍到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>执行上面的第二个命令，可能会要你输入用户名和密码，皆为注册Github时的数据，输入密码是不显示任何东西的，输入完毕回车即可。<br>此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问<code>huangjunhui.github.io</code>就能看到自己的博客了。第一次访问刚地址，可能访问不了，您可以在几分钟后进行访问，一般不超过10分钟。</p>
+<h3 id="hexo的配置文件"><a href="#hexo的配置文件" class="headerlink" title="hexo的配置文件"></a>hexo的配置文件</h3><p>hexo里面有两个常用到的配置文件，分别是整个博客的配置文件<code>E:\hexo\_config.yml</code>和主题的配置文件<code>E:\hexo\themes\light\_config.yml</code>，此地址是对于我来说，hexo3.0使用的默认主题是landscape，因此你们的地址应该是<code>E:\hexo\themes\landscape\_config.yml</code>，下文所有讲到light的地方，你们将之换为自己的主题名即可。<br>本博客使用的主题是基于light改善的主题，目前还在完善中，如果完成的比较好，以后可能发布在github上。如果你想自己挑选喜欢的主题，hexo官方提供了12个主题供你自己选择，使用方法很简单，点击自己想要的主题，进入该主题的Repository，使用Git将主题clone到本地，然后将整个文件夹复制到<code>E:\hexo\themes</code>文件夹下，将<code>E:\hexo\_config.yml</code>里的theme名字改为自己下载的主题的文件夹名即可。<br>接下来介绍整个博客的配置文件。<br>E:\hexo_config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration</div><div class="line">## Docs: http://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site  这下面的几项配置都很简单，你看我的博客就知道分别是什么意思</div><div class="line">title: Chillax blog #博客名</div><div class="line">subtitle: Goals determine what you are going to be  #副标题</div><div class="line">description: Goals determine what you are going to be #用于搜索，没有直观表现</div><div class="line">author: huangjunhui #作者</div><div class="line">language: zh-CN #语言</div><div class="line">timezone:   #时区，此处不填写，hexo会以你目前电脑的时区为默认值</div><div class="line"></div><div class="line"># URL   暂不配置，使用默认值</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://opiece.me  #域名</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"># Directory     暂不配置，使用默认值</div><div class="line">source_dir: source</div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"></div><div class="line"># Writing   文章布局等，使用默认值</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag    暂不配置，使用默认值</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Date / Time format    时间格式，使用默认值</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"># Pagination    </div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 10    #每页显示的文章数，0表示不分页</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Extensions    插件配置，暂时不配置</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">plugins:</div><div class="line">- hexo-generator-feed</div><div class="line">theme: light    #使用的主题，即：E:\myblog\themes文件夹下的主题文件夹名</div><div class="line"></div><div class="line">feed:   #之后配置rss会用，使用如下配置即可</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 20  </div><div class="line"></div><div class="line"># Deployment    用于部署到github，之前已经配置过</div><div class="line">## Docs: http://hexo.io/docs/deployment.html</div><div class="line"></div><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: http://github.com/huangjunhui/huangjunhui.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>按照自己的意愿修改完后，执行<code>hexo g</code>，<code>hexo s</code>，打开<code>localhost:4000</code>看看效果。<br><code>E:\hexo\themes\light\_config.yml</code>，此处针对Concise主题，如果使用其他主题，请查看自己主题的帮助文档，<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT主题帮助文档</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">menu:   #博客右上角的菜单栏，暂时使用默认值</div><div class="line">  首页: /</div><div class="line">  归档: /archives</div><div class="line">  关于: /about</div><div class="line">  </div><div class="line">#该类对应于E:\hexo\themes\light\layout\_widget下的文件</div><div class="line">widgets:    #站点右边栏，可以参照我的博客看，暂时使用默认值</div><div class="line">- intro     #简介</div><div class="line">- search        #搜索</div><div class="line">- category  #分类</div><div class="line">- tagcloud  #标签云</div><div class="line">- weibo     #微博</div><div class="line">- blogroll  #友情链接</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">excerpt_link: Read more #文章下的Read more，可以改为&apos;阅读全文&apos;</div><div class="line"></div><div class="line">plugins:    #插件，暂时使用默认值</div><div class="line"></div><div class="line">twitter:    #twitter</div><div class="line">  username:</div><div class="line">  show_replies: false</div><div class="line">  tweet_count: 5</div><div class="line"></div><div class="line">addthis:    #SNS分享，暂时使用默认</div><div class="line">  enable: true</div><div class="line">  pubid:</div><div class="line">  facebook: true</div><div class="line">  twitter: true</div><div class="line">  google: true</div><div class="line">  pinterest: true</div><div class="line"></div><div class="line">fancybox: true  #图片效果，使用默认值</div><div class="line"></div><div class="line">google_analytics: </div><div class="line">rss:    #生成RSS，暂时使用默认值</div></pre></td></tr></table></figure></p>
+<p>以上的改动不多，大多是介绍下功能。</p>
+<h3 id="发表一篇文章"><a href="#发表一篇文章" class="headerlink" title="发表一篇文章"></a>发表一篇文章</h3><p>1.在Git Bash执行命令：<code>$ hexo new &quot;my new post&quot;</code><br>2.在<code>E:\hexo\source\_post</code>中打开<code>my-new-post.md</code>，打开方式使用记事本或notepad++。<br>hexo中写文章使用的是Markdown，没接触过的可以看下<a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">Markdown语法说明</a>,<a href="http://lutaf.com/markdown-simple-usage.htm" target="_blank" rel="external">一分钟学会Markdown</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: my new post #可以改成中文的，如“新文章”</div><div class="line">date: 2015-04-08 22:56:29 #发表日期，一般不改动</div><div class="line">categories: blog #文章文类</div><div class="line">tags: [博客，文章] #文章标签，多于一项时用这种格式，只有一项时使用tags: blog</div><div class="line">---</div><div class="line">#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</div><div class="line">&lt;!--more--&gt;#在&lt;!--more--&gt;之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到</div></pre></td></tr></table></figure></p>
+<p>写完文章后，你可以使用</p>
+<ol>
+<li><code>$ hexo g生成静态文件。</code></li>
+<li><code>$ hexo s在本地预览效果。</code></li>
+<li><code>hexo d同步到github</code>，然后使用<a href="http://huangjunhui.github.io" target="_blank" rel="external">http://huangjunhui.github.io</a>进行访问。</li>
+</ol>
+<h3 id="另一种发布到github的配置"><a href="#另一种发布到github的配置" class="headerlink" title="另一种发布到github的配置"></a>另一种发布到github的配置</h3><p>有不少人反馈说无法发布到github，现在提供另一种配置方式，这种方式在发布时不需要输入密码，也是我目前使用的方法，配置代码如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: git@github.com:huangjunhui/huangjunhui.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>这种配置方式，需要配置SSH key，教程如下：<br>鼠标右键任意地方，选择Git Bash，<br><code>$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</code></p>
+<p>后面的your_email@youremail.com改为你的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在<code>C:\Users\Administrator</code>下生成.ssh文件夹，进入该文件夹，打开id_rsa.pub，复制里面的key。<br>回到github，进入Settings，选择SSH and GPG Keys -&gt; New SSH Key，title随便填，粘贴key。为了验证是否成功，在git bash下输入：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated， but GitHub does not provide shell access ，这就表示已成功连上github。<br>接下来我们要做的就是把本地仓库传到github上去，在此之前还需要设置username和email，因为github每次commit都会记录他们。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;your name&quot;  </div><div class="line">$ git config --global user.email &quot;your_email@youremail.com&quot;</div></pre></td></tr></table></figure></p>
+<p><img src="http://opiece.me/images/article/hexo-guide-6.png" alt=""><br><strong>提示：请使用<code>git bash</code>执行，<code>cmd</code>和<code>nodejs</code>执行<code>ssh</code> 会找不到。</strong></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>本文转自：<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Chillax’s Blog</a>的<a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/04/hexo_teach_1/" data-id="cj24wq5o30005zsuppqjzoa8x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -123,7 +509,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
   </div>
 
@@ -131,12 +517,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/12/26/hello-world/">Hello World</a>
+            <a href="/2017/02/05/ES6-ES2015核心内容/">ES6/ES2015核心内容</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/">前端如何实现图片懒加载(lazyload) 提高用户体验</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/02/hexo系列教程（二）-更换主题/">hexo系列教程（二）:更换主题</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/">Sublime Text3 使用Markdown实时预览教程</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/11/前端面试知识点锦集（JavaScript篇）/">前端面试知识点锦集（JavaScript篇）</a>
           </li>
         
       </ul>
@@ -152,7 +554,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

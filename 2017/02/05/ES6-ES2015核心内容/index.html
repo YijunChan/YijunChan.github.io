@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ES6/ES2015核心内容 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ECMAScript6(以下简称ES6)是JavScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript2015.也就是说，ES6就是ECMAScript2015.虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序猿在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…
+在我们正式讲解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6/ES2015核心内容">
+<meta property="og:url" content="http://yoursite.com/2017/02/05/ES6-ES2015核心内容/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ECMAScript6(以下简称ES6)是JavScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript2015.也就是说，ES6就是ECMAScript2015.虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序猿在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…
+在我们正式讲解">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAPhBnsW9jAMmialG8d5icicjKZDCfAJWufBAn7tB1CqHvb6ePU9USlRw1SUOFa9yJKUiamO9ib0O79ZgzQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1">
+<meta property="og:updated_time" content="2017-02-06T09:08:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6/ES2015核心内容">
+<meta name="twitter:description" content="ECMAScript6(以下简称ES6)是JavScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript2015.也就是说，ES6就是ECMAScript2015.虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序猿在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…
+在我们正式讲解">
+<meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAPhBnsW9jAMmialG8d5icicjKZDCfAJWufBAn7tB1CqHvb6ePU9USlRw1SUOFa9yJKUiamO9ib0O79ZgzQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ES6-ES2015核心内容" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/05/ES6-ES2015核心内容/" class="article-date">
+  <time datetime="2017-02-05T08:00:59.000Z" itemprop="datePublished">2017-02-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6/ES2015核心内容
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ECMAScript6(以下简称ES6)是JavScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript2015.<br>也就是说，ES6就是ECMAScript2015.<br>虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序猿在实际项目当中已经开始使用ES6了。所以就算你现在不打算使用ES6，但为了看懂别人的你也该懂点ES6的语法了…</p>
+<p>在我们正式讲解ES6语法之前，我们得先了解下Babel。</p>
+<h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h3><p>Babel是一个广泛使用的ES6转换器，可以将ES6代码转换为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看：<br><img src="http://mmbiz.qpic.cn/mmbiz_png/btsCOHx9LAPhBnsW9jAMmialG8d5icicjKZDCfAJWufBAn7tB1CqHvb6ePU9USlRw1SUOFa9yJKUiamO9ib0O79ZgzQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h3 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h3><ul>
+<li>let,const</li>
+<li>class,extends,super</li>
+<li>arrow functions</li>
+<li>template string</li>
+<li>destructuring</li>
+<li>default</li>
+<li>rest arguments</li>
+</ul>
+<h4 id="let-const"><a href="#let-const" class="headerlink" title="let,const"></a>let,const</h4><p>这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。<br>首先来看下面这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var name = &quot;zach&quot;;</div><div class="line"></div><div class="line">while(true)&#123;</div><div class="line">    var name = &quot;obama&quot;;</div><div class="line">    console.log(name); //obama</div><div class="line">    break;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(name); //obama</div></pre></td></tr></table></figure></p>
+<p>使用var 两次输出都是obama，这是因为ES5只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。第一种场景就是你现在看到的内层变量覆盖外层变量。而let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let name = &apos;zach&apos;</div><div class="line"> </div><div class="line">while (true) &#123;</div><div class="line">    let name = &apos;obama&apos;</div><div class="line">    console.log(name)  //obama</div><div class="line">    break</div><div class="line">&#125;</div><div class="line"> </div><div class="line">console.log(name)  //zach</div></pre></td></tr></table></figure></p>
+<p>另一个var带来的不合理场景就是用来计数的循环变量泄漏为全局变量，如下例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for(var i = 0; i&lt; 10;i ++)&#123;</div><div class="line">    a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line">a[6](); //10</div></pre></td></tr></table></figure></p>
+<p>上面代码中，变量i是var声明的，在全局范围内都有效。所以每一次循环，新的i值都会覆盖旧值，导致最后输出的是最后一轮的i的值。而使用let则不会出现这个问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">  a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 6</div></pre></td></tr></table></figure></p>
+<p>再来看一个更常见的例子，了解下如果不用ES6，而用闭包如何解决这个问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var clickBoxs = document.querySelectorAll(&quot;.clickBox&quot;);</div><div class="line">for(var i = 0; i &lt; clickBoxs.length;i++)&#123;</div><div class="line">    clickBoxs[i].onclick = function()&#123;</div><div class="line">        console.log(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们本来希望的是点击不同的clickBox，显示不同的i，但事实是无论我们点击哪个clickBox，输出的都是5。下面我们来看下，如何用闭包搞定它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function iteratorFactory(i)&#123;</div><div class="line">    var onclick = function()&#123;</div><div class="line">        console.log(i)</div><div class="line">    &#125;</div><div class="line">    return onclick;</div><div class="line">&#125;</div><div class="line">var clickBoxs = document.querySelectorAll(&apos;.clickBox&apos;)</div><div class="line">for (var i = 0; i &lt; clickBoxs.length; i++)&#123;</div><div class="line">    clickBoxs[i].onclick = iteratorFactory(i)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>const也用来声明变量，但是声明的是常量。一旦声明，常量的值就不能改变。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const PI = Math.PI</div><div class="line"> </div><div class="line">PI = 23 //Module build failed: SyntaxError: /es6/app.js: &quot;PI&quot; is read-only</div></pre></td></tr></table></figure></p>
+<p>当我们尝试去改变用const声明的常量时，浏览器就会报错。const有一个很好的应用场景，就是当我们引用第三方库的时声明的变量，用const来声明可以避免未来不小心重命名而导致出现bug：<br><code>const monent = require(&#39;moment&#39;)</code></p>
+<h4 id="class-extends-super"><a href="#class-extends-super" class="headerlink" title="class, extends, super"></a>class, extends, super</h4><p>这3个特性涉及了ES5中最令人头疼的几个部分：原型、构造函数、继承…你还在为它们复杂难懂的语法而烦恼吗？你还在为指针到底指向哪里而纠结万分吗？<br>有了ES6我们不在烦恼！<br>ES6提供更接近传统语言的写法，引入了Class（类）这个概念。新的Class写法让对象原型的写法更加清晰、更像面向对象编程的语法，也更加通俗易懂。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        console.log(this.type + &apos; says &apos; + say)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let animal = new Animal();</div><div class="line">animal.says(&quot;hello&quot;);   //animal says hello</div><div class="line"></div><div class="line">class Cat extends Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        super();</div><div class="line">        this.type = &quot;cat&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">let cat = new Cat();</div><div class="line">Cat.says(&quot;hello&quot;);  //cat says hello</div></pre></td></tr></table></figure></p>
+<p>上面代码首先用class定义了有一个“类”，可以看到里面有一个constructor方法，这就是构造方法，而this关键字则代表实例对象。简单地说，constructor内定义的方法和属性是实例对象自己的，而constructor外定义的方法和属性则是所有实例对象可以共享的。<br>Class之间可以通过extends关键字实现继承，这比ES5的通过修改原型链实现继承，要清晰和方便很多。上面定义了一个Cat类，该类通过extends关键字，继承了Animal类的所有属性和方法。<br>super关键字，它指代父类的实例（即父类的this对象）。子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不用super方法，子类就得不到this对象。<br>ES6的继承机制，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this。<br>PS：如果你写react的话，就会发现以上3个东西在最新版React中出现得最多。创建的每个component都是一个继承React Component的类。详见React文档。</p>
+<h4 id="arrow-function"><a href="#arrow-function" class="headerlink" title="arrow function"></a>arrow function</h4><p>这个恐怕是ES6最最常用的一个新特性了，用它来写function比原来的写法要简洁清晰很多:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function(i)&#123; return i + 1; &#125; //ES5</div><div class="line">(i) =&gt; i + 1 //ES6</div></pre></td></tr></table></figure></p>
+<p>简直是简单的不像话对吧…<br>如果方程比较复杂，则需要用{}把代码包起来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function(x, y) &#123; </div><div class="line">    x++;</div><div class="line">    y--;</div><div class="line">    return x + y;</div><div class="line">&#125;</div><div class="line">(x, y) =&gt; &#123;x++; y--; return x+y&#125;</div></pre></td></tr></table></figure></p>
+<p>除了看上去更简洁以外，arrow function还有一项超级无敌的功能！<br>长期以来，JavaScript语言的this对象一直是一个令人头痛的问题，在对象方法中使用this，必须非常小心。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        setTimeout(function()&#123;</div><div class="line">            console.log(this.type + &quot; syas &quot; + say)</div><div class="line">            &#125;,1000)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">vae animal = new Animal();</div><div class="line">animal.says(&quot;hi&quot;);  //undefined says hi</div></pre></td></tr></table></figure></p>
+<p>运行上面的代码会报错，这是因为setTimeout中的this指向的是全局对象。所以为了他能够正确的运行，传统的解决方法有两种：<br>第一种是将this传给self，再用self来指代this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">says(say)&#123;</div><div class="line">       var self = this;</div><div class="line">       setTimeout(function()&#123;</div><div class="line">           console.log(self.type + &apos; says &apos; + say)</div><div class="line">       &#125;, 1000)</div></pre></td></tr></table></figure></p>
+<p>第二种方法是用bind(this),即<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">says(say)&#123;</div><div class="line">       setTimeout(function()&#123;</div><div class="line">           console.log(this.type + &apos; says &apos; + say)</div><div class="line">       &#125;.bind(this), 1000)</div></pre></td></tr></table></figure></p>
+<p>但现在我们有了箭头函数，就不需要这么麻烦了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Animal&#123;</div><div class="line">    constructor()&#123;</div><div class="line">        this.type = &quot;animal&quot;;</div><div class="line">    &#125;</div><div class="line">    says(say)&#123;</div><div class="line">        setTimeout(()=&gt;&#123;</div><div class="line">            console.log(this.type + &quot; says &quot; + say )</div><div class="line">            &#125;,1000)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> var animal = new Animal()</div><div class="line"> animal.says(&apos;hi&apos;)  //animal says hi</div></pre></td></tr></table></figure></p>
+<p>当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，它的this是继承外面的，因此内部的this就是外层代码块的this。</p>
+<h4 id="template-string"><a href="#template-string" class="headerlink" title="template string"></a>template string</h4><p>这个东西也是非常有用，当我们要插入大段的html内容到文档时，传统的写法非常麻烦，所以之前我们通常会引用一些模版工具库，比如mustache等等。<br>大家可以先看一看下面一段代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(&quot;#result&quot;).append(</div><div class="line">  &quot;There are &lt;b&gt;&quot; + basket.count + &quot;&lt;/b&gt; &quot; +</div><div class="line">  &quot;items in your basket, &quot; +</div><div class="line">  &quot;&lt;em&gt;&quot; + basket.onSale +</div><div class="line">  &quot;&lt;/em&gt; are on sale!&quot;</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>我们要用一堆的’+’号来连接文本与变量，而使用ES6的新特性模板字符串“后，我们可以直接这么来写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#result&quot;).append(&apos;</div><div class="line">    There are &lt;b&gt;$&#123;basket.count&#125;&lt;/b&gt; items</div><div class="line">    in your basket, &lt;em&gt;$&#123;basket.onSale&#125;&lt;/em&gt;</div><div class="line">    are on sale!</div><div class="line">    &apos;)</div></pre></td></tr></table></figure></p>
+<p>用反引号（\）来标志起始，用${}来引用变量，而且所有的空格和缩进都会被保留在输出之中，是不是非常爽？！<br>React Router从第1.0.3版开始也使用ES6语法了，比如这个例子:<br><code>&lt;Link to={</code>/taco/${taco.name}<code>}&gt;{taco.name}&lt;/Link&gt;</code></p>
+<h4 id="destructuring"><a href="#destructuring" class="headerlink" title="destructuring"></a>destructuring</h4><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）<br>看下面例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let cat = &quot;ken&quot;;</div><div class="line">let dog = &quot;lili&quot;;</div><div class="line">let zoo = &#123;cat:cat,dog:dog&#125;;</div><div class="line">console.log(zoo);   //Object &#123;cat:&quot;ken&quot;,dog:&quot;lili&quot;&#125;</div></pre></td></tr></table></figure></p>
+<p>用ES6完全可以像下面这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let cat = &apos;ken&apos;</div><div class="line">let dog = &apos;lili&apos;</div><div class="line">let zoo = &#123;cat, dog&#125;</div><div class="line">console.log(zoo)  //Object &#123;cat: &quot;ken&quot;, dog: &quot;lili&quot;&#125;</div></pre></td></tr></table></figure></p>
+<p>反过来可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let dog = &#123;type: &apos;animal&apos;, many: 2&#125;</div><div class="line">let &#123; type, many&#125; = dog</div><div class="line">console.log(type, many)   //animal 2</div></pre></td></tr></table></figure></p>
+<h4 id="default-rest"><a href="#default-rest" class="headerlink" title="default, rest"></a>default, rest</h4><p>default很简单，意思就是默认值。大家可以看下面的例子，调用animal()方法时忘了传参数，传统的做法就是加上这一句type = type || ‘cat’ 来指定默认值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function animal(type)&#123;</div><div class="line">    type = type || &apos;cat&apos;  </div><div class="line">    console.log(type)</div><div class="line">&#125;</div><div class="line">animal()</div></pre></td></tr></table></figure></p>
+<p>如果用ES6我们而已直接这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function animal(type = &apos;cat&apos;)&#123;</div><div class="line">    console.log(type);</div><div class="line">&#125;</div><div class="line">animal();</div></pre></td></tr></table></figure></p>
+<p>最后一个rest语法也很简单，直接看例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function animals(...types)&#123;</div><div class="line">    console.log(types)</div><div class="line">&#125;</div><div class="line">animals(&apos;cat&apos;, &apos;dog&apos;, &apos;fish&apos;) //[&quot;cat&quot;, &quot;dog&quot;, &quot;fish&quot;]</div></pre></td></tr></table></figure></p>
+<p>而如果不用ES6的话，我们则得使用ES5的arguments。</p>
+<h4 id="import-export"><a href="#import-export" class="headerlink" title="import export"></a>import export</h4><p>这两个家伙对应的就是ES6自己的module功能。<br>我们之前写的Javascript一直都没有模块化的体系，无法将一个庞大的JS工程拆分成一个个功能相对独立但相互依赖的小工程，再用一种简单的方法把这些小工程连接在一起。<br>这有可能导致两个问题：</p>
+<ol>
+<li>一方面JS代码变得很臃肿，难以维护</li>
+<li>另一方面我们常常得很注意每个script标签在html中的位置，因为它们通常存在依赖关系，顺序错了有可能就会出BUG。</li>
+</ol>
+<p>在ES6之前为解决上面提到的问题，我们得利用第三方提供的一些方案，主要有两种CommonJs（服务器端）和AMD（浏览器端，如require.js）<br>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。<br>上面的设计思想看不懂也没关系，咱先学会怎么用，等以后用多了、熟练了再去研究它背后的设计思想也不迟！好，那我们就上代码…</p>
+<h5 id="传统的写法"><a href="#传统的写法" class="headerlink" title="传统的写法"></a>传统的写法</h5><p>首先我们回顾下require.js的写法。假设我们有两个js文件: index.js和content.js,现在我们想要在index.js中使用content.js返回的结果，我们要怎么做呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//content.js</div><div class="line">define(&apos;content.js&apos;, function()&#123;</div><div class="line">    return &apos;A cat&apos;;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>然后require：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">require([&apos;./content.js&apos;], function(animal)&#123;</div><div class="line">    console.log(animal);   //A cat</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>那CommonJS是怎么写的呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">var animal = require(&apos;./content.js&apos;)</div><div class="line"> </div><div class="line">//content.js</div><div class="line">module.exports = &apos;A cat&apos;</div></pre></td></tr></table></figure></p>
+<p>以上我把三者都列出来了，妈妈再也不用担心我写混淆了…</p>
+<h4 id="ES6-module的其他高级用法"><a href="#ES6-module的其他高级用法" class="headerlink" title="ES6 module的其他高级用法"></a>ES6 module的其他高级用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//content.js</div><div class="line"> </div><div class="line">export default &apos;A cat&apos;    </div><div class="line">export function say()&#123;</div><div class="line">    return &apos;Hello!&apos;</div><div class="line">&#125;    </div><div class="line">export const type = &apos;dog&apos;</div></pre></td></tr></table></figure>
+<p>上面可以看出，export命令除了输出变量，还可以输出函数，甚至是类（react的模块基本都是输出类）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import &#123; say, type &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;type&#125; says $&#123;says&#125;`)  //The dog says Hello</div></pre></td></tr></table></figure></p>
+<p>这里输入的时候要注意：大括号里面的变量名，必须与被导入模块（content.js）对外接口的名称相同。</p>
+<p>如果还希望输入content.js中输出的默认值(default), 可以写在大括号外面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import animal, &#123; say, type &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;type&#125; says $&#123;says&#125; to $&#123;animal&#125;`)  </div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<h4 id="修改变量名"><a href="#修改变量名" class="headerlink" title="修改变量名"></a>修改变量名</h4><p>此时我们不喜欢type这个变量名，因为它有可能重名，所以我们需要修改一下它的变量名。在es6中可以用as实现一键换名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> </div><div class="line">import animal, &#123; say, type as animalType &#125; from &apos;./content&apos;  </div><div class="line">let says = say()</div><div class="line">console.log(`The $&#123;animalType&#125; says $&#123;says&#125; to $&#123;animal&#125;`)  </div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<h4 id="模块的整体加载"><a href="#模块的整体加载" class="headerlink" title="模块的整体加载"></a>模块的整体加载</h4><p>除了指定加载某个输出值，还可以使用整体加载，即用星号（*）指定一个对象，所有输出值都加载在这个对象上面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"></div><div class="line">import animal,* as content from &apos;./content&apos;</div><div class="line">let says = content.say();</div><div class="line">console.log(&apos;the $&#123;content.type&#125; says $&#123;says&#125; to $&#123;animal&#125;&apos;)</div><div class="line">//The dog says Hello to A cat</div></pre></td></tr></table></figure></p>
+<p>通常星号*结合as一起使用比较合适。</p>
+<h4 id="终极秘籍"><a href="#终极秘籍" class="headerlink" title="终极秘籍"></a>终极秘籍</h4><p>考虑下面的场景：上面的content.js一共输出了三个变量（default, say, type）,假如我们的实际项目当中只需要用到type这一个变量，其余两个我们暂时不需要。我们可以只输入一个变量：<br><code>import { type } from &#39;./content&#39;</code><br>由于其他两个变量没有被使用，我们希望代码打包的时候也忽略它们，抛弃它们，这样在大项目中可以显著减少文件的体积。</p>
+<p>ES6帮我们实现了！<br>不过，目前无论是webpack还是browserify都还不支持这一功能…</p>
+<p>如果你现在就想实现这一功能的话，可以尝试使用rollup.js</p>
+<p>他们把这个功能叫做Tree-shaking，哈哈哈，意思就是打包前让整个文档树抖一抖，把那些并未被依赖或使用的东西统统抖落下去。。。</p>
+<p>看看他们官方的解释吧：<br><code>Normally if you require a module, you import the whole thing. ES2015 lets you just import the bits you need, without mucking around with custom builds. It&#39;s a revolution in how we use libraries in JavaScript, and it&#39;s happening right now.</code></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>以上就是ES6最常用的一些语法，可以说这20%的语法，在ES6的日常使用中占了80%</p>
+<blockquote>
+<p>转自 <a href="https://segmentfault.com/a/1190000004365693" target="_blank" rel="external">https://segmentfault.com/a/1190000004365693</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/05/ES6-ES2015核心内容/" data-id="cj24wq5nn0000zsupiw5uoap3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端如何实现图片懒加载(lazyload) 提高用户体验</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/05/ES6-ES2015核心内容/">ES6/ES2015核心内容</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/">前端如何实现图片懒加载(lazyload) 提高用户体验</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/02/hexo系列教程（二）-更换主题/">hexo系列教程（二）:更换主题</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/">Sublime Text3 使用Markdown实时预览教程</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/11/前端面试知识点锦集（JavaScript篇）/">前端面试知识点锦集（JavaScript篇）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

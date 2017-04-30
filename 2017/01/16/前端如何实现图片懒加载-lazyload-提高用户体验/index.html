@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端如何实现图片懒加载(lazyload) 提高用户体验 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="定义图片懒加载又称图片延迟加载，惰性加载，即在用户需要使用图片的时候加载，这样可以减少请求，节省带宽，提高页面加载速度，相对的，也能减少服务器压力。惰性加载是程序人性化的一种体现，提高用户体验，防止一次性加载大量数据，而是根据用户需要进行资源的请求。
+实现懒加载的难点在于确定某张图片是否用户需要的资源，在浏览器中，用户需要的是可视区的资源，因此我们只需要判断图片是否已经呈现在可视区内，当图片在可视">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端如何实现图片懒加载(lazyload) 提高用户体验">
+<meta property="og:url" content="http://yoursite.com/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="定义图片懒加载又称图片延迟加载，惰性加载，即在用户需要使用图片的时候加载，这样可以减少请求，节省带宽，提高页面加载速度，相对的，也能减少服务器压力。惰性加载是程序人性化的一种体现，提高用户体验，防止一次性加载大量数据，而是根据用户需要进行资源的请求。
+实现懒加载的难点在于确定某张图片是否用户需要的资源，在浏览器中，用户需要的是可视区的资源，因此我们只需要判断图片是否已经呈现在可视区内，当图片在可视">
+<meta property="og:updated_time" content="2017-01-16T02:19:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端如何实现图片懒加载(lazyload) 提高用户体验">
+<meta name="twitter:description" content="定义图片懒加载又称图片延迟加载，惰性加载，即在用户需要使用图片的时候加载，这样可以减少请求，节省带宽，提高页面加载速度，相对的，也能减少服务器压力。惰性加载是程序人性化的一种体现，提高用户体验，防止一次性加载大量数据，而是根据用户需要进行资源的请求。
+实现懒加载的难点在于确定某张图片是否用户需要的资源，在浏览器中，用户需要的是可视区的资源，因此我们只需要判断图片是否已经呈现在可视区内，当图片在可视">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-前端如何实现图片懒加载-lazyload-提高用户体验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/" class="article-date">
+  <time datetime="2017-01-16T01:55:13.000Z" itemprop="datePublished">2017-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端如何实现图片懒加载(lazyload) 提高用户体验
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>图片懒加载又称图片延迟加载，惰性加载，即在用户需要使用图片的时候加载，这样可以减少请求，节省带宽，提高页面加载速度，相对的，也能减少服务器压力。<br>惰性加载是程序人性化的一种体现，提高用户体验，防止一次性加载大量数据，而是根据用户需要进行资源的请求。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>懒加载的难点在于确定某张图片是否用户需要的资源，在浏览器中，用户需要的是可视区的资源，因此我们只需要判断图片是否已经呈现在可视区内，当图片在可视区内时，获取图片的真实地址并赋值给该图片即可（图片宽高需要指定，可以利用padding处理）。<br>判断是否存在于可视区</p>
+<ol>
+<li>浏览器视口高度</li>
+<li>待加载资源距离视口顶端位置<br>通过以上两点即可判断是否位于可视区内。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var nodes = document.querySelectorAll(&quot;img[data-src]&quot;);</div><div class="line">    elem = nodes[0];</div><div class="line">    rect = elem.getBoundingClientRect();</div><div class="line">    vpHeight = document.document.clientHeight;</div><div class="line">if(react.top &lt; vpHeight &amp;&amp; react.bottom &gt;=0)&#123;</div><div class="line">    console.log(&quot;show&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>之后获取图片的真是地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;loading.ggif&quot; alt=&quot;&quot; data-src=&quot;1.gif&quot;&gt;</div><div class="line">...</div><div class="line">&lt;script&gt;</div><div class="line">    var src = elem.dataset.src;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>把真是地址赋给图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var img = new Image();</div><div class="line">img.onload = function()&#123;</div><div class="line">    elem.src = img.src;</div><div class="line">&#125;</div><div class="line">img.src = src;</div></pre></td></tr></table></figure></p>
+<p>完整代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">var scrollElement = document.querySelector(&apos;.page&apos;),</div><div class="line">    viewH = document.documentElement.clientHeight;</div><div class="line"> </div><div class="line">function lazyload()&#123;</div><div class="line">  var nodes = document.querySelectorAll(&apos;img[data-src]&apos;);</div><div class="line"> </div><div class="line">  Array.prototype.forEach.call(nodes,function(item,index)&#123;</div><div class="line">    var rect;</div><div class="line">    if(item.dataset.src===&apos;&apos;) return;</div><div class="line"> </div><div class="line">    rect = item.getBoundingClientRect();</div><div class="line"> </div><div class="line">    if(rect.bottom&gt;=0 &amp;&amp; rect.top &lt; viewH)&#123;</div><div class="line">        (function(item)&#123;</div><div class="line">          var img = new Image();</div><div class="line">          img.onload = function()&#123;</div><div class="line">            item.src = img.src;</div><div class="line">          &#125;</div><div class="line">          img.src = item.dataset.src</div><div class="line">          item.dataset.src = &apos;&apos;</div><div class="line">        &#125;)(item)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"> </div><div class="line">lazyload();</div><div class="line"> </div><div class="line">scrollElement.addEventListener(&apos;scroll&apos;,throttle(lazyload,500,1000));</div><div class="line"> </div><div class="line">function throttle(fun, delay, time) &#123;</div><div class="line">    var timeout,</div><div class="line">        startTime = new Date();</div><div class="line">    return function() &#123;</div><div class="line">        var context = this,</div><div class="line">            args = arguments,</div><div class="line">            curTime = new Date();</div><div class="line">        clearTimeout(timeout);</div><div class="line">        if (curTime - startTime &gt;= time) &#123;</div><div class="line">            fun.apply(context, args);</div><div class="line">            startTime = curTime;</div><div class="line">        &#125; else &#123;</div><div class="line">            timeout = setTimeout(fun, delay);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h4><p>为了方便演示，demo里给img.onload 添加了500ms延时,<a href="http://funteas.com/lab/lazyload/" target="_blank" rel="external">demo连接请点击这里</a>;</p>
+<hr>
+<h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><p>以上内容转载自微信公众号Javascript<a href="http://mp.weixin.qq.com/s?__biz=MzAwNjI5MTYyMw==&amp;mid=2651493537&amp;idx=1&amp;sn=0f6db2549c28f475333e82ef7530aa8c&amp;chksm=80f19d69b786147f1465e36ee0892f320cdd3f9021ba57e73395d4c82b8867465be3ca407bae&amp;mpshare=1&amp;scene=23&amp;srcid=0116Azl2wOfbNq5VGffShYZA#rd" target="_blank" rel="external">前端如何实现图片懒加载(lazyload) 提高用户体验</a></p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>在dedecms织梦中已经有这个功能了，而Jquery插件当然也少不了，比如这个<a href="http://www.antcome.com/site/2944.html" target="_blank" rel="external">JQuery LazyLoad</a>;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/" data-id="cj24wq5ny0003zsupjap7vndy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/05/ES6-ES2015核心内容/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ES6/ES2015核心内容
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/02/hexo系列教程（二）-更换主题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo系列教程（二）:更换主题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/05/ES6-ES2015核心内容/">ES6/ES2015核心内容</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/16/前端如何实现图片懒加载-lazyload-提高用户体验/">前端如何实现图片懒加载(lazyload) 提高用户体验</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/02/hexo系列教程（二）-更换主题/">hexo系列教程（二）:更换主题</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/22/Sublime-Text3-使用Markdown实时预览教程/">Sublime Text3 使用Markdown实时预览教程</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/11/前端面试知识点锦集（JavaScript篇）/">前端面试知识点锦集（JavaScript篇）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
