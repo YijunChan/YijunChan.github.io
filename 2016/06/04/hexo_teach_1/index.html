@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://opiece.me/images/article/hexo-guide-4.png">
 <meta property="og:image" content="http://opiece.me/images/article/hexo-guide-5.png">
 <meta property="og:image" content="http://opiece.me/images/article/hexo-guide-6.png">
-<meta property="og:updated_time" content="2017-02-04T08:58:44.000Z">
+<meta property="og:updated_time" content="2017-05-24T15:00:25.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo系列教程（一）:安装">
 <meta name="twitter:description" content="前言经过一番折腾，总算把hexo搞出来，域名用的是阿里云的，服务器也没买，用的是github.io，主题为：hexo 大道至简的Maupassant，自动给我们做了响应式处理，简洁好用；然后还少不了hexo后台管理：hexo-admin ,这个具体后面章节会讲到。那么，让我们进入正题:
@@ -336,7 +336,7 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过一番折腾，总算把hexo搞出来，域名用的是阿里云的，服务器也没买，用的是github.io，主题为：<a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="external">hexo 大道至简</a>的Maupassant，自动给我们做了响应式处理，简洁好用；然后还少不了hexo后台管理：<a href="https://github.com/dworthen/js-yaml-front-matter" target="_blank" rel="external">hexo-admin</a> ,这个具体后面章节会讲到。那么，让我们进入正题:</p>
 <h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p><img src="http://oisa4f1vi.bkt.clouddn.com/hexo1.jpg" alt=""><br>首先声明，本教程所针对的是windows用户。</p>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载并安装<a href="http://pan.baidu.com/s/1miqAjlY?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;stoken=ae3a8cde136756fe8a3f562fe9b9fc5fdd70030ad225550fd208f087bf7203d6a50d4f37bdfc6775915119c77ff7ba4447685489bbd9d9394808504dcffb66e74345ded2be9b&amp;bduss=259879ba8d8a40e3f807ed3f277d37a3a270164da657411591bee758e02e1cbe9ea19500aca30a0568414378a8a340c6b4ec44dd6507d6d57d841eafa681142c7848f69d8609458f824b2528046eef8d908c64c15f5c65583f5306488528fb1f5a8b44eee1ed8b8e2b4573d29bbba2bb606d70d8a6931cb0be6bba34da5dea3ad650eea7f36d0624f8044490a688ca4586067141f1ac957b163216fc0e9769cd5445cea1eda2150eda9dea1c5500e944176290744a88a4c097fa021d6153c3e23a163f56f825&amp;ssnerror=0" target="_blank" rel="external">git</a>，如果你想了解点Git的基础命令，我推荐以下博文：<a href="http://opiece.me/2015/04/06/git-basic-commands/" target="_blank" rel="external">Git常用的基础命令</a>，<a href="http://blog.csdn.net/v123411739/article/details/44071059/" target="_blank" rel="external">史上最全github使用方法：github入门到精通</a>,当然即使你不懂Git的命令，跟着本博文走，也完全没问题。</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载并安装<a href="http://pan.baidu.com/s/1miqAjlY?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;stoken=ae3a8cde136756fe8a3f562fe9b9fc5fdd70030ad225550fd208f087bf7203d6a50d4f37bdfc6775915119c77ff7ba4447685489bbd9d9394808504dcffb66e74345ded2be9b&amp;bduss=259879ba8d8a40e3f807ed3f277d37a3a270164da657411591bee758e02e1cbe9ea19500aca30a0568414378a8a340c6b4ec44dd6507d6d57d841eafa681142c7848f69d8609458f824b2528046eef8d908c64c15f5c65583f5306488528fb1f5a8b44eee1ed8b8e2b4573d29bbba2bb606d70d8a6931cb0be6bba34da5dea3ad650eea7f36d0624f8044490a688ca4586067141f1ac957b163216fc0e9769cd5445cea1eda2150eda9dea1c5500e944176290744a88a4c097fa021d6153c3e23a163f56f825&amp;ssnerror=0" target="_blank" rel="external">git</a>，如果你想了解点Git的基础命令，我推荐以下博文：<a href="http://opiece.me/2015/04/06/git-basic-commands/" target="_blank" rel="external">Git常用的基础命令</a>，<a href="http://blog.csdn.net/v123411739/article/details/44071059/" target="_blank" rel="external">史上最全github使用方法：github入门到精通</a>,当然即使你不懂Git的命令，跟着本博文走，也完全没问题。<br><a id="more"></a></p>
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装前先介绍几个hexo常用的命令,#后面为注释。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo g #完整命令为hexo generate，用于生成静态文件  </div><div class="line">$ hexo s #完整命令为hexo server，用于启动服务器，主要用来本地预览  </div><div class="line">$ hexo d #完整命令为hexo deploy，用于将本地文件发布到github上  </div><div class="line">$ hexo n #完整命令为hexo new，用于新建一篇文章</div></pre></td></tr></table></figure>
 <p>鼠标右键任意地方，选择Git Bash，使用以下命令安装hexo<strong>（ps：以下命令中的$符号只为了让教程和实际看起来一致，实际输入命令只需输入$ 后面的命令即可）</strong><br><code>$ npm install hexo-cli -g</code></p>
@@ -485,7 +485,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
