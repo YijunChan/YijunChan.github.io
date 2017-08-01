@@ -1,0 +1,699 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
+目标实现以下动画效果：
+基础这里我们讲讲canvas基本的API接口，包括canvas创建，直线绘制，圆/弧绘制，线段粗细、颜色等等；
+canvas创建123&amp;lt;canvas id=&quot;canvas&quot;&amp;gt;  当前浏览器不支持canvas，请更换浏览器再试 //这句当浏览器不支持canv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas动画总结">
+<meta property="og:url" content="http://www.chenyiun.net/2017/07/30/Canvas动画总结/index.html">
+<meta property="og:site_name" content="Chan's Blog">
+<meta property="og:description" content="前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
+目标实现以下动画效果：
+基础这里我们讲讲canvas基本的API接口，包括canvas创建，直线绘制，圆/弧绘制，线段粗细、颜色等等；
+canvas创建123&amp;lt;canvas id=&quot;canvas&quot;&amp;gt;  当前浏览器不支持canvas，请更换浏览器再试 //这句当浏览器不支持canv">
+<meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/canvas.gif">
+<meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/line.png">
+<meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/fill.png">
+<meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/circle.png">
+<meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/circle2.png">
+<meta property="og:updated_time" content="2017-08-01T14:59:48.567Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas动画总结">
+<meta name="twitter:description" content="前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
+目标实现以下动画效果：
+基础这里我们讲讲canvas基本的API接口，包括canvas创建，直线绘制，圆/弧绘制，线段粗细、颜色等等；
+canvas创建123&amp;lt;canvas id=&quot;canvas&quot;&amp;gt;  当前浏览器不支持canvas，请更换浏览器再试 //这句当浏览器不支持canv">
+<meta name="twitter:image" content="http://oisa4f1vi.bkt.clouddn.com/canvas.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.chenyiun.net/2017/07/30/Canvas动画总结/"/>
+
+
+
+
+
+  <title>Canvas动画总结 | Chan's Blog</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.chenyiun.net/2017/07/30/Canvas动画总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/title.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Canvas动画总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T20:09:33+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。</p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>实现以下动画效果：<br><img src="http://oisa4f1vi.bkt.clouddn.com/canvas.gif" alt=""></p>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>这里我们讲讲canvas基本的API接口，包括canvas创建，直线绘制，圆/弧绘制，线段粗细、颜色等等；</p>
+<h5 id="canvas创建"><a href="#canvas创建" class="headerlink" title="canvas创建"></a>canvas创建</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span>&gt;</span></div><div class="line">  当前浏览器不支持canvas，请更换浏览器再试 //这句当浏览器不支持canvas会显示出来</div><div class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化</span></div><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line"><span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">context.width = <span class="number">1024</span>;</div><div class="line">context.height = <span class="number">768</span>;</div></pre></td></tr></table></figure>
+<p>这样初始化就完成，<br>获取ID，然后设置canvas上下文为2d（另一个为3d，可实现更酷炫的3d canvas效果，这里不进行深入）<br>然后设置宽高，这里推荐宽高在context里面设置，且不需要单位，这样更符合w3c标准，记住即可。</p>
+<h5 id="绘制直线"><a href="#绘制直线" class="headerlink" title="绘制直线"></a>绘制直线</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">context.moveTo(<span class="number">100</span>,<span class="number">100</span>);    <span class="comment">//移动到（100，100）这个点，注意是以canvas画布左上角算起</span></div><div class="line">context.lineTo(<span class="number">700</span>,<span class="number">700</span>);    <span class="comment">//准备连线到（700，700），注意这是准备还没开始绘制</span></div><div class="line">context.lineWidth = <span class="number">4</span>;      <span class="comment">//设置线段的宽度，默认为：</span></div><div class="line">context.strokeStyle = <span class="string">'#005588'</span>;  <span class="comment">//设置线段的颜色</span></div><div class="line">context.stroke();           <span class="comment">//进行线段绘制</span></div></pre></td></tr></table></figure>
+<p><img src="http://oisa4f1vi.bkt.clouddn.com/line.png" alt="这是一个canvas直线图片"><br>这样就直线绘制完成</p>
+<h5 id="绘制块"><a href="#绘制块" class="headerlink" title="绘制块"></a>绘制块</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">context.moveTo(<span class="number">100</span>,<span class="number">100</span>);</div><div class="line">context.lineTo(<span class="number">700</span>,<span class="number">700</span>);</div><div class="line">context.lineTo(<span class="number">100</span>,<span class="number">700</span>);</div><div class="line">context.lineTo(<span class="number">100</span>,<span class="number">100</span>);</div><div class="line"></div><div class="line">context.fillStyle = <span class="string">"rgba(2,100,30)"</span>; <span class="comment">//设置填充填的样式</span></div><div class="line">context.fill(); <span class="comment">//执行填充</span></div></pre></td></tr></table></figure>
+<p><img src="http://oisa4f1vi.bkt.clouddn.com/fill.png" alt="这是一个canvas块图片"><br>当最后一个lineTo没有回到开始位置（即（100，100）），浏览器会默认帮你连线回到开始位置，即执行lineTo(100,100,).</p>
+<h5 id="绘制圆及弧"><a href="#绘制圆及弧" class="headerlink" title="绘制圆及弧"></a>绘制圆及弧</h5><p>先看看弧的绘制：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">context.arc(</div><div class="line">    centerX,centerY,    <span class="comment">//确定圆心</span></div><div class="line">    radius,             <span class="comment">//半径</span></div><div class="line">    startingAngle,endingAngle,  <span class="comment">//开始角度与结束角度，注意这里无论顺时针还是逆时针，都是以右边为0度</span></div><div class="line">    anticlockwise = <span class="literal">false</span>   <span class="comment">//非必选，默认为false-顺时针，为true-逆时针</span></div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p><img src="http://oisa4f1vi.bkt.clouddn.com/circle.png" alt="这是一个canvas圆弧图片"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">context.arc(<span class="number">300</span>,<span class="number">300</span>,<span class="number">200</span>,<span class="number">0</span>，<span class="number">1.5</span>*<span class="built_in">Math</span>.PI);</div><div class="line">context.stroke()</div></pre></td></tr></table></figure></p>
+<p><img src="http://oisa4f1vi.bkt.clouddn.com/circle2.png" alt="这是一个canvas圆弧2图片"><br>圆无非就是由弧360°然后填充而来，具体如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">context.arc(<span class="number">300</span>,<span class="number">300</span>,<span class="number">200</span>,<span class="number">0</span>，<span class="number">2</span>*<span class="built_in">Math</span>.PI);</div><div class="line">context.fill()</div></pre></td></tr></table></figure></p>
+<h3 id="开始实现"><a href="#开始实现" class="headerlink" title="开始实现"></a>开始实现</h3><p>基础讲完，我们就开始一步步实现。<br>这节我们分为：动画思路，封装函数，拆分与整合。</p>
+<h5 id="动画思路"><a href="#动画思路" class="headerlink" title="动画思路"></a>动画思路</h5><p>其实，人看到的视频动画都是一帧一帧展现出来的，我们的思路也如此，只要达到60hz的人眼识别频率就可以了。<br>故我们的直线动画这么写:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * @param:starP-开始位置，endP-结束位置,timing-步进</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">anmi_line</span>(<span class="params">starP,endP,timing</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(starP.x &amp;&amp; starP.y &amp;&amp; endP.x endP endP.y )&#123;    <span class="comment">//健壮性校验</span></div><div class="line">    <span class="built_in">console</span>.error(<span class="string">"请输入正确的开始位置与结束位置"</span>);</div><div class="line">    <span class="keyword">return</span> ;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> timing = timing || <span class="number">50</span>;</div><div class="line">  <span class="keyword">var</span> depart = <span class="number">10</span>;                              <span class="comment">//将线段分成10份来进行动画，其中每份动画的执行时间为timing</span></div><div class="line">  <span class="keyword">var</span> adx_addNum = (starP.x - endP.x) / depart; <span class="comment">//确定步进</span></div><div class="line">  <span class="keyword">var</span> ady_addNum = (starP.y - endP.y) / depart;</div><div class="line">  <span class="keyword">var</span> adx_next = startX + adx_addNum;</div><div class="line">  <span class="keyword">var</span> ady_next = startY + ady_addNum;</div><div class="line">  <span class="keyword">var</span> timer = <span class="literal">null</span>;                             <span class="comment">//用来保存定时器</span></div><div class="line"></div><div class="line">  timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//以下针对各个方向的线进行了判断，达到条件清除定时器</span></div><div class="line">    <span class="keyword">if</span> (starP.x == endP.x) &#123;               <span class="comment">//针对竖线</span></div><div class="line">        <span class="keyword">if</span> (ady_next &gt;= endP.y) &#123;</div><div class="line">            clearInterval(timer);</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((endP.x - starP.x) &lt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (adx_next &lt;= endP.x) &#123;</div><div class="line">            clearInterval(timer);</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((endP.x - starP.x) &gt;= <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (adx_next &gt;= endP.x) &#123;</div><div class="line">            clearInterval(timer);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    context.beginPath(); <span class="comment">// 开始绘制线条</span></div><div class="line">    context.strokeStyle = <span class="string">"#2aa151"</span>;</div><div class="line">    context.lineWidth = <span class="number">1</span>;</div><div class="line">    context.lineCap = <span class="string">'butt'</span>;</div><div class="line">    context.moveTo(startX, startY);</div><div class="line">    context.lineTo(adx_next, ady_next);</div><div class="line">    context.stroke();       <span class="comment">//注意，这里没有closePath(),是为了更好的视觉效果</span></div><div class="line">    adx_next = adx_next + adx_addNum;</div><div class="line">    ady_next = ady_next + ady_addNum;</div><div class="line"></div><div class="line">  &#125;,timing)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/15/参加腾讯Web前端大会-TFC2017-是一种什么什么样的体验？/" rel="next" title="参加腾讯Web前端大会<TFC2017/>是一种什么什么样的体验？">
+                <i class="fa fa-chevron-left"></i> 参加腾讯Web前端大会<TFC2017/>是一种什么什么样的体验？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/title.jpg"
+               alt="Chan" />
+          <p class="site-author-name" itemprop="name">Chan</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标"><span class="nav-number">2.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">3.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#canvas创建"><span class="nav-number">3.0.1.</span> <span class="nav-text">canvas创建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绘制直线"><span class="nav-number">3.0.2.</span> <span class="nav-text">绘制直线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绘制块"><span class="nav-number">3.0.3.</span> <span class="nav-text">绘制块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绘制圆及弧"><span class="nav-number">3.0.4.</span> <span class="nav-text">绘制圆及弧</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始实现"><span class="nav-number">4.</span> <span class="nav-text">开始实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动画思路"><span class="nav-number">4.0.1.</span> <span class="nav-text">动画思路</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
