@@ -93,8 +93,7 @@
 <meta name="description" content="img{        display: inline-block;        max-width: 300px;        max-height: 300px;    }
 前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
 目标拿到的psd：
-实现以下动画效果：
-基础这里我们讲讲canvas基本的API接口，包括canvas">
+实现以下动画效果：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Canvas动画总结">
 <meta property="og:url" content="http://www.chenyiun.net/2017/07/30/Canvas动画总结/index.html">
@@ -102,8 +101,7 @@
 <meta property="og:description" content="img{        display: inline-block;        max-width: 300px;        max-height: 300px;    }
 前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
 目标拿到的psd：
-实现以下动画效果：
-基础这里我们讲讲canvas基本的API接口，包括canvas">
+实现以下动画效果：">
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170907134304.jpg">
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/canvas.gif">
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/line.png">
@@ -112,14 +110,13 @@
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/circle2.png">
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/ringDraw.jpg">
 <meta property="og:image" content="http://oisa4f1vi.bkt.clouddn.com/canvas5.jpg">
-<meta property="og:updated_time" content="2017-09-11T15:28:41.519Z">
+<meta property="og:updated_time" content="2017-09-11T15:39:40.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Canvas动画总结">
 <meta name="twitter:description" content="img{        display: inline-block;        max-width: 300px;        max-height: 300px;    }
 前言正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。
 目标拿到的psd：
-实现以下动画效果：
-基础这里我们讲讲canvas基本的API接口，包括canvas">
+实现以下动画效果：">
 <meta name="twitter:image" content="http://oisa4f1vi.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170907134304.jpg">
 
 
@@ -347,7 +344,7 @@
         <p><style><br>    img{<br>        display: inline-block;<br>        max-width: 300px;<br>        max-height: 300px;<br>    }<br></style></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>正所谓温故而知新，可以为师矣。正好前段公司在微信端实现了一个canvas动画，所以今天在这里做个总结。</p>
 <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>拿到的psd：<br><img src="http://oisa4f1vi.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170907134304.jpg" alt=""></p>
-<p>实现以下动画效果：<br><img src="http://oisa4f1vi.bkt.clouddn.com/canvas.gif" alt=""></p>
+<p>实现以下动画效果：<br><img src="http://oisa4f1vi.bkt.clouddn.com/canvas.gif" alt=""><a id="more"></a></p>
 <h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>这里我们讲讲canvas基本的API接口，包括canvas创建，直线绘制，圆/弧绘制，线段粗细、颜色等等；</p>
 <h5 id="canvas创建"><a href="#canvas创建" class="headerlink" title="canvas创建"></a>canvas创建</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span>&gt;</span></div><div class="line">  当前浏览器不支持canvas，请更换浏览器再试 //这句当浏览器不支持canvas会显示出来</div><div class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化</span></div><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line"><span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">context.width = <span class="number">1024</span>;</div><div class="line">context.height = <span class="number">768</span>;</div></pre></td></tr></table></figure>
@@ -382,7 +379,7 @@
 <blockquote>
 <p>代码地址：<a href="http://runjs.cn/detail/xpaopopr" target="_blank" rel="external">demo5</a></p>
 </blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>待续…</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>此次canvas动画总结就到这基本结束了，<br>其实无论是功能还是特效，思路是最重要的，想通、验证通方法后面都是细节优化问题。</p>
 
       
     </div>
