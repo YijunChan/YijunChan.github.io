@@ -92,7 +92,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Chan's Blog">
-<meta property="og:url" content="http://www.chenyiun.net/archives/2017/05/index.html">
+<meta property="og:url" content="http://www.chenyiun.net/page/2/index.html">
 <meta property="og:site_name" content="Chan's Blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chan's Blog">
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://www.chenyiun.net/archives/2017/05/"/>
+  <link rel="canonical" href="http://www.chenyiun.net/page/2/"/>
 
 
 
 
 
-  <title>归档 | Chan's Blog</title>
+  <title>Chan's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,7 +154,9 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,66 +239,140 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 11 篇日志。 继续努力。
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.chenyiun.net/2016/06/04/hexo_teach_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/title.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chan's Blog">
     </span>
 
     
+      <header class="post-header">
 
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/04/hexo_teach_1/" itemprop="url">
+                  hexo系列教程（一）:安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-04T00:00:00+08:00">
+                2016-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
         
-            <a class="post-title-link" href="/2017/05/21/安利一波FIS3/" itemprop="url">
-              
-                <span itemprop="name">安利一波FIS3</span>
-              
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经过一番折腾，总算把hexo搞出来，域名用的是阿里云的，服务器也没买，用的是github.io，主题为：<a href="https://www.haomwei.com/technology/maupassant-hexo.html">hexo 大道至简</a>的Maupassant，自动给我们做了响应式处理，简洁好用；然后还少不了hexo后台管理：<a href="https://github.com/dworthen/js-yaml-front-matter">hexo-admin</a> ,这个具体后面章节会讲到。那么，让我们进入正题:</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p><img src="http://oisa4f1vi.bkt.clouddn.com/hexo1.jpg" alt=""><br>首先声明，本教程所针对的是windows用户。</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载并安装<a href="http://pan.baidu.com/s/1miqAjlY?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;stoken=ae3a8cde136756fe8a3f562fe9b9fc5fdd70030ad225550fd208f087bf7203d6a50d4f37bdfc6775915119c77ff7ba4447685489bbd9d9394808504dcffb66e74345ded2be9b&amp;bduss=259879ba8d8a40e3f807ed3f277d37a3a270164da657411591bee758e02e1cbe9ea19500aca30a0568414378a8a340c6b4ec44dd6507d6d57d841eafa681142c7848f69d8609458f824b2528046eef8d908c64c15f5c65583f5306488528fb1f5a8b44eee1ed8b8e2b4573d29bbba2bb606d70d8a6931cb0be6bba34da5dea3ad650eea7f36d0624f8044490a688ca4586067141f1ac957b163216fc0e9769cd5445cea1eda2150eda9dea1c5500e944176290744a88a4c097fa021d6153c3e23a163f56f825&amp;ssnerror=0">git</a>，如果你想了解点Git的基础命令，我推荐以下博文：<a href="http://opiece.me/2015/04/06/git-basic-commands/">Git常用的基础命令</a>，<a href="http://blog.csdn.net/v123411739/article/details/44071059/">史上最全github使用方法：github入门到精通</a>,当然即使你不懂Git的命令，跟着本博文走，也完全没问题。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/06/04/hexo_teach_1/#more" rel="contents">
+              阅读全文 &raquo;
             </a>
+          </div>
+          <!--/noindex-->
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-21T01:26:42+08:00"
-              content="2017-05-21" >
-          05-21
-        </time>
-      </div>
+    <div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
-
     
-
   </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
@@ -489,12 +565,6 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
