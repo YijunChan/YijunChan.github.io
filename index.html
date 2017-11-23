@@ -325,75 +325,17 @@
 
       
         
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近又在找工作了。之前在中科智康做得好好的为什么要在找工作呢？</p>
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近又在找工作了。之前在中科智康做得好好的为什么要在找工作呢？</p>
 <p>原因嘛，说出来你可能不信，中科智康破产了。中间经历一系列拖欠工资，谣言四起，领导层纷争等等，总算完成了辞职。</p>
 <p>说说年底找工作情况把，因为之前创业公司的前车之鉴，尽量就没投创立公司的坑了，选择B轮+或者500人+的公司，然后这周参加了3个面试，分别是彩票创业公司、SheIn境外电商、布谷鸟境外电商。<br>也都拿到了这3家的前端offer，其中SheIn 2轮技术面，创业3轮，布谷鸟2轮，其实最想去SheIn，可惜Hr那边薪资压得太低了。<br>今晚也收到了一家C轮的大公司的电话面。</p>
-<p>言归正传，说说自己总结的前端面试技术点：<br>（部分内容摘取其他网站，摘取链接结尾贴出；如有侵权，联系删除）</p>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h4 id="HTML5语义化"><a href="#HTML5语义化" class="headerlink" title="HTML5语义化"></a>HTML5语义化</h4><p>语义化一方面为了代码的可读性和可维护性，另一方面也有利于网站SEO</p>
-<h4 id="HTML5新标签"><a href="#HTML5新标签" class="headerlink" title="HTML5新标签"></a>HTML5新标签</h4><ol>
-<li><code>&lt;section&gt;&lt;/section&gt;</code>,</li>
-<li><code>&lt;header&gt;&lt;/header&gt;</code>,</li>
-<li><code>&lt;footer&gt;&lt;/footer&gt;</code>,</li>
-<li><code>&lt;figure&gt;&lt;/figure&gt;与&lt;figcation&gt;&lt;/figcation&gt;</code>,</li>
-<li><code>&lt;input&gt;的type相关，如：date、number、time、color、range、week、month等等</code>,</li>
-<li><code>&lt;nav&gt;&lt;/nav&gt;</code><br>等等<h4 id="HTML中使用’data-‘好处"><a href="#HTML中使用’data-‘好处" class="headerlink" title="HTML中使用’data-‘好处"></a>HTML中使用’data-‘好处</h4>自定义属性，个人感觉可以将某些数据存在HTML上，方便日后的一些操作。</li>
-</ol>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h4 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h4><p>主要考察<code>box-sizing</code>,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.class&#123;</div><div class="line">    box-sizing:content-box(默认值，只包含width)/border-box(包含padding、border、width)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><p><code>position:relative/absolute/fixed</code>的区别<br>当<code>absulute</code>的所有父元素都没有<code>relative</code>将会相对什么定位，答：浏览器视口</p>
-<h4 id="CSS三角"><a href="#CSS三角" class="headerlink" title="CSS三角"></a>CSS三角</h4><p>关键属性border与tranparent</p>
-<h4 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h4><p>BFC这块比较重要，重要解决边距重叠（margin重叠）<br>BFC(Block formatting context)直译为”块级格式化上下文”。它是一个独立的渲染区域，只有 Block-level box 参 与， 它规定了内部的 Block-level Box 如何布局，并且与这个区域外部毫不相干。</p>
-<h5 id="BFC的渲染规则"><a href="#BFC的渲染规则" class="headerlink" title="BFC的渲染规则"></a>BFC的渲染规则</h5><ul>
-<li>BFC这个元素的垂直方向的边距会发生重叠</li>
-<li>BFC的区域不会与浮动元素的box重叠（清除浮动原理）</li>
-<li>BFC在页面上是一个独立的容器，外面的元素不会影响它里面的元素，反过来它里面的元素也不会影响外面的元素</li>
-<li>计算BFC的高度的时候，浮动元素也会参与计算</li>
-</ul>
-<h5 id="如何创建BFC？"><a href="#如何创建BFC？" class="headerlink" title="如何创建BFC？"></a>如何创建BFC？</h5><ul>
-<li>overflow属性不为visible</li>
-<li>float属性不为none</li>
-<li>position属性为absolute或fixed</li>
-<li>display属性为inline-block、table-cell、table-caption、flex、inline-flex</li>
-</ul>
-<h4 id="CSS其他"><a href="#CSS其他" class="headerlink" title="CSS其他"></a>CSS其他</h4><p>关于CSS这块，强烈推荐看一下张鑫旭的视频：<a href="https://www.imooc.com/u/197450/courses?sort=publish" target="_blank" rel="external">https://www.imooc.com/u/197450/courses?sort=publish</a><br>个人对于CSS这块感到兴趣无比，写CSS是我前端开发中最开心的时刻。<br>另外，能用CSS实现的动画就别用JS去写。<br>再有，动画尽量用<a href="http://www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%E5%8A%A8%E7%94%BB%E7%AE%97%E6%B3%95/" target="_blank" rel="external">requestAnimationFrame</a>去替代定时器，保持帧率在60hz。</p>
-<h3 id="Javascript-及-ES6"><a href="#Javascript-及-ES6" class="headerlink" title="Javascript 及 ES6"></a>Javascript 及 ES6</h3><p>考察一名前端的功底，js可谓重中之重。<br>主要是考察Javascript原生的方法、事件机制、原型链及OOP编程等等。</p>
-<h4 id="Javascript原生属性"><a href="#Javascript原生属性" class="headerlink" title="Javascript原生属性"></a>Javascript原生属性</h4><h5 id="数组有多少种方法，分别作用？"><a href="#数组有多少种方法，分别作用？" class="headerlink" title="数组有多少种方法，分别作用？"></a>数组有多少种方法，分别作用？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">avr arr = [1,2,3];</div><div class="line">arr.jion(&quot;-&quot;)               //数字转String</div><div class="line">arr.push()与arr.pop()       //push:添加数据到数组末尾，pop：移出数组的最后一项</div><div class="line">arr.shift()与arr.unshift()        //shift:删除数据到数组头位，unshift：添加数组的头位</div><div class="line">arr.sort()                  //排序方法</div><div class="line">arr.reverse()               //数组翻转</div><div class="line"></div><div class="line">slice()与splice（）</div><div class="line">//slice()：返回从原数组中指定开始下标到结束下标之间的项组成的新数组。slice()方法可以接受一或两个参数，即要返回项的起始和结束位置。在只有一个参数的情况下， slice()方法返回从该参数指定位置开始到当前数组末尾的所有项。如果有两个参数，该方法返回起始和结束位置之间的项——但不包括结束位置的项。</div><div class="line">var arr = [1,3,5,7,9,11];</div><div class="line">var arrCopy = arr.slice(1);</div><div class="line">var arrCopy2 = arr.slice(1,4);</div><div class="line">var arrCopy3 = arr.slice(1,-2);</div><div class="line">var arrCopy4 = arr.slice(-4,-1);</div><div class="line">console.log(arr);           //[1, 3, 5, 7, 9, 11](原数组没变)</div><div class="line">console.log(arrCopy);   //[3, 5, 7, 9, 11]</div><div class="line">console.log(arrCopy2); //[3, 5, 7]</div><div class="line">console.log(arrCopy3); //[3, 5, 7]</div><div class="line">console.log(arrCopy4); //[5, 7, 9]</div><div class="line"></div><div class="line">/*</div><div class="line">splice()：很强大的数组方法，它有很多种用法，可以实现删除、插入和替换。</div><div class="line"></div><div class="line">删除：可以删除任意数量的项，只需指定 2 个参数：要删除的第一项的位置和要删除的项数。例如， splice(0,2)会删除数组中的前两项。</div><div class="line"></div><div class="line">插入：可以向指定位置插入任意数量的项，只需提供 3 个参数：起始位置、 0（要删除的项数）和要插入的项。例如，splice(2,0,4,6)会从当前数组的位置 2 开始插入4和6。</div><div class="line">替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定 3 个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。例如，splice (2,1,4,6)会删除当前数组位置 2 的项，然后再从位置 2 开始插入4和6。</div><div class="line"></div><div class="line">splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项，如果没有删除任何项，则返回一个空数组。</div><div class="line">*/</div><div class="line">var arr = [1,3,5,7,9,11];</div><div class="line">var arrRemoved = arr.splice(0,2);</div><div class="line">console.log(arr); //[5, 7, 9, 11]</div><div class="line">console.log(arrRemoved); //[1, 3]</div><div class="line">var arrRemoved2 = arr.splice(2,0,4,6);</div><div class="line">console.log(arr); // [5, 7, 4, 6, 9, 11]</div><div class="line">console.log(arrRemoved2); // []</div><div class="line">var arrRemoved3 = arr.splice(1,1,2,4);</div><div class="line">console.log(arr); // [5, 2, 4, 4, 6, 9, 11]</div><div class="line">console.log(arrRemoved3); //[7]</div><div class="line"></div><div class="line">arr.indexOf()           //接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的开头（位置 0）开始向后查找。 没有返回-1</div><div class="line">arr.lastIndexOf()       //接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的末尾开始向前查找。没有返回-1</div></pre></td></tr></table></figure>
-<h5 id="Javascript原型链及OOP编程"><a href="#Javascript原型链及OOP编程" class="headerlink" title="Javascript原型链及OOP编程"></a>Javascript原型链及OOP编程</h5><p>一言难尽，自己看视频把：<a href="https://www.imooc.com/learn/277" target="_blank" rel="external">JavaScript深入浅出</a></p>
-<h5 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h5><p>作用：读取其他函数的内部变量<br>实现：立即执行函数<br>原理（未确认正确性）：避免gc（垃圾回收机制），另一个说法是作用域链引用了外部函数的作用域（详见高程P178的闭包章节）</p>
-<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><p>详见<a href="http://www.chenyijun.net/2017/02/05/ES6-ES2015%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" target="_blank" rel="external">ES6/ES2015核心内容</a></p>
-<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><p>因为目前自己的技术栈只有Jquery和VueJs，分别针对这2个详细说一下</p>
-<h4 id="Jquery"><a href="#Jquery" class="headerlink" title="Jquery"></a>Jquery</h4><h5 id="Jquery的事件机制"><a href="#Jquery的事件机制" class="headerlink" title="Jquery的事件机制"></a>Jquery的事件机制</h5><blockquote>
-<p>详见：<a href="https://www.imooc.com/learn/222" target="_blank" rel="external">jQuery源码解析（DOM与核心模块）</a></p>
-</blockquote>
-<p>Jquery的事件都是基于addEventListener实现，<br>需要分别了解live，bind，delegate，on的区别：</p>
-<ol>
-<li>使用bind必须是已经存在的元素</li>
-<li>live在jquery1.9.1之后不再使用，而用delegate替代，live存在性能问题，不能链式调用，会被unbind移出事件等等缺陷</li>
-<li>委托事件推荐使用delegate或on，</li>
-<li>其实 .bind(), .live(), .delegate()都是通过.on()来实现的，.unbind(), .die(), .undelegate()也是一样的都是通过.off()来实现的，提供了一种统一绑定事件的方法</li>
-</ol>
-<h5 id="如何写Jquery插件"><a href="#如何写Jquery插件" class="headerlink" title="如何写Jquery插件"></a>如何写Jquery插件</h5><p>关键理解$.fn与$.extend<br>详见<a href="http://www.cnblogs.com/ghost-xyx/p/5025571.html" target="_blank" rel="external">jQuery插件编写基础之“又见弹窗”</a></p>
-<ol>
-<li>问：$.fn是类级别插件开发还是对象？  答：类，fn即prototype挂载在Jquery的原型链上</li>
-<li><p>保持函数的私有性怎么做？ 答：闭包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">;(function($) &#123;</div><div class="line">    $.fn.foo = function(options) &#123;</div><div class="line">        var opts = $.extend(&#123;&#125;, $.fn.foo.defaults, options);</div><div class="line">        debug(opts.backgroundColor);</div><div class="line">    &#125;</div><div class="line">　</div><div class="line">    function debug(bgColors) &#123;</div><div class="line">        console.log(bgColors);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    $.fn.foo.defaults = &#123;</div><div class="line">        color: &apos;#000&apos;,</div><div class="line">        backgroundColor: &apos;red&apos;</div><div class="line">    &#125;</div><div class="line">&#125;)(jQuery)</div></pre></td></tr></table></figure>
-</li>
-<li><p>Jquery如何实现链式调用？ 答：在插件最后返回这个对象.</p>
-</li>
-</ol>
-<h4 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h4><p>Vue的话，主要问到filter（过滤器）、生命周期。其实我觉得vue-router、vuex还是有一些内容</p>
-<ol>
-<li>filter怎么用？在什么场景用？<br>vue1.x有内置的过滤器，2.x由于考虑性能和大小，去除内置过滤器。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//html</div><div class="line">&lt;!-- in v-bind --&gt;</div><div class="line">&lt;div v-bind:id=&quot;rawId | formatId&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">//js</div><div class="line">new Vue(&#123;</div><div class="line">  // ...</div><div class="line">  filters: &#123;</div><div class="line">    capitalize: function (value) &#123;</div><div class="line">      if (!value) return &apos;&apos;</div><div class="line">      value = value.toString()</div><div class="line">      return value.charAt(0).toUpperCase() + value.slice(1)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">`</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>2.生命周期<br>从beforeCreate到destroyed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">beforeCreate -&gt; created &gt; beforeMount -&gt; mounted -&gt; beforeUpdate -&gt; updated -&gt; beforeDestroy -&gt; destroyed</div><div class="line">当然中间还有个 actived得配合vue-router的keep-alive使用</div></pre></td></tr></table></figure></p>
-<h3 id="引用及资源"><a href="#引用及资源" class="headerlink" title="引用及资源"></a>引用及资源</h3><blockquote>
-<p><a href="caisk.cn">菜同学的blog</a></p>
-<p><a href="http://dunizb.com/2017/09/08/interview-questions-2017/#" target="_blank" rel="external">Dunizb的我遇到的前端面试题2017</a></p>
-<p><em>最最强烈推荐的是快乐动起来呀老师的</em><a href="http://coding.imooc.com/class/129.html" target="_blank" rel="external">前端跳槽面试必备技巧</a>,真是讲的太棒了。有经济能力希望去慕课网去支持一下，<br>百度云:<a href="http://pan.baidu.com/s/1mhEyRoO" target="_blank" rel="external">http://pan.baidu.com/s/1mhEyRoO</a>，密码：rf3t</p>
-</blockquote>
-
-          
+<p>言归正传，说说自己总结的前端面试技术点：<br>（部分内容摘取其他网站，摘取链接结尾贴出；如有侵权，联系删除）<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/23/2017年-前端面试题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
